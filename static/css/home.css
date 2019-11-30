@@ -1,0 +1,229 @@
+/*.Carousel {*/
+/*    !*height: 420px;*!*/
+/*    !*background: yellow;*!*/
+/*    background-image: url("../imgs/Carousel/bg4.png");*/
+/*    position: relative;*/
+/*}*/
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+.Carousel {
+    /*height: 420px;*/
+    /*background: yellow;*/
+    background-image: url("../imgs/Carousel/bg2.png");
+    position: relative;
+}
+.Carouse2 {
+    /*height: 420px;*/
+    /*background: yellow;*/
+    background-image: url("../imgs/Carousel/bg1.png");
+    position: relative;
+}
+.Carouse3 {
+    /*height: 420px;*/
+    /*background: yellow;*/
+    background-image: url("../imgs/Carousel/bg3.png");
+    position: relative;
+}
+.Carouse4 {
+    /*height: 420px;*/
+    /*background: yellow;*/
+    background-image: url("../imgs/Carousel/bg4.png");
+    position: relative;
+}
+.Carouse5 {
+    /*height: 420px;*/
+    /*background: yellow;*/
+    background-image: url("../imgs/Carousel/bg5.png");
+    position: relative;
+}
+#Carousel .imgCarousel {
+    width: 1080px;
+    height: 420px;
+    background: red;
+    margin: 0 auto;
+    position: relative;
+}
+
+.imgCarousel img {
+    width: 1080px;
+    height: 420px;
+}
+
+
+#nav {
+    position: absolute;
+    bottom: 15px;
+}
+
+#nav a {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: white;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+#nav a:hover {
+    background: red;
+}
+.img_pre{
+    position: absolute;
+    left: 300px;
+    top: 190px;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    background: url("../imgs/Carousel/pre1.png");
+    background-size: 40px 60px;
+}
+.img_pre:hover{
+    background: url("../imgs/Carousel/pre2.png");
+    background-size: 40px 60px;
+}
+.img_next{
+    position: absolute;
+    right: 300px;
+    top: 190px;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    background: url("../imgs/Carousel/next1.png");
+    background-size: 40px 60px;
+}
+.img_next:hover{
+    background: url("../imgs/Carousel/next2.png");
+    background-size: 40px 60px;
+}
+.main_box{
+    margin: 0 auto;
+    width: 1030px;
+    padding: 25px 25px 50px 25px;
+    position: relative;
+    border: 1px solid #d3d3d3;
+    border-top: 0;
+    margin-bottom: 0;
+}
+.box .box_top{
+    width: 1015px;
+    height: 65px;
+    padding-left:15px ;
+    line-height: 65px;
+    border-bottom: 2px solid #c10d0c;
+    margin-bottom: 20px;
+}
+.box_top a{
+    list-style: none;
+    line-height: 65px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 25px;
+
+}
+
+.imgContent img{
+    width: 170px;
+    height: 170px;
+}
+
+.imgContent .subImgContent{
+    margin-right: 80px;
+    float: left;
+}
+
+.imgContent .imgContent1{
+    margin-bottom: 30px;
+    padding: 26px 26px;
+}
+
+.subImgContent .text_a{
+    color: #191919;
+    text-decoration: none;
+}
+.subImgContent .text_a:hover{
+    border-bottom: 1px solid #191919;
+}
+
+.n_blist{
+    background: #f4f4f4;
+    width: 1028px;
+    border: 1px solid #969696;
+    position: relative;
+}
+.n_blist .blk{
+    width: 342px;
+    border-right:1px solid #d3d3d3 ;
+    float: left;
+    position: relative;
+}
+.blk .top{
+    background: none;
+    height: 120px;
+    width: 282px;
+    float: right;
+    /*right: 0;*/
+    /*top: 40px;*/
+}
+.blk img{
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+.blk .Top{
+    padding-top:40px ;
+    width: 342px;
+}
+.Top .top .top_title{
+    float: left;
+    height: 70px;
+    padding-top: 50px;
+}
+.blk .text_blist{
+    color:#333333 ;
+    text-decoration: none;
+    font-weight: bold;
+}
+.blk .text_blist:hover{
+    border-bottom: 1px solid #333333;
+}
+.blk .blk_content{
+    width: 342px;
+    float: left;
+    text-decoration: none;
+}
+.blk_content ul{
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 1px;
+    color: black;
+}
+.blk a{
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+.blk li{
+    height: 50px;
+    width: 280px;
+    line-height: 50px;
+    padding-left:60px ;
+}
+.blk ul li:nth-of-type(odd){
+    background: #e8e8e8;
+}
+
+.Red{
+    color: #c10d0c;
+}
+.Gray{
+    color: #666666;
+}
+
+
+

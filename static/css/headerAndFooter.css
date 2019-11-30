@@ -1,0 +1,88 @@
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+body{
+    position: relative;
+}
+*{
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+}
+.top{
+    height:70px ;
+    background-color: #242424;
+    /*background: yellow;*/
+}
+.top .top1{
+    /*height: 70px;*/
+    width: 1052px;
+    margin: 0 auto;
+    padding: 0 0;
+    /*background: red;*/
+    position: relative;
+    /*left: 402px;*/
+}
+.top1 a{
+    float: left;
+    width: 172px;
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    /*background: black;*/
+}
+.top1 img,.top h1{
+    float: left;
+    margin: 19px 0;
+}
+.top1 ul{
+    float: left;
+    /*background: blue;*/
+    height: 70px;
+}
+.top1 ul>li{
+    float: left;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+}
+.top1 ul>li:hover{
+    background: black;
+}
+.top .search{
+    height: 70px;
+    width: 260px;
+    text-align: right;
+    float: left;
+    line-height: 70px;
+}
+.search input{
+    height: 32px;
+    border-radius: 20px;
+}
+.footer{
+    height:140px ;
+    width: 100%;
+    background: #f2f2f2;
+    padding-top:20px ;
+    /*background: red;*/
+    position: relative;
+    bottom: 0;
+}
+.footer .description{
+    width: 1080px;
+    height: 120px;
+    margin: 0 auto;
+    /*position: absolute;*/
+    /*left: 522px;*/
+ }
+.footer a,.footer p{
+    color: #b2b2b2;
+    font: 11px 'Myriad Pro';
+    text-decoration: none;
+    height: 30px;
+}

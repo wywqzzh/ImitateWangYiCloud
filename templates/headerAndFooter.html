@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/headerAndFooter.css') }}">
+    {% block link %}
+    {% endblock %}
+</head>
+<body>
+<div class="top">
+    <div class="top1 clearfix">
+        <a href="#" class="clearfix">
+            <img src="{{ url_for('static',filename='imgs/logo.ico') }}">
+            <h1 class="logo">网易云音乐</h1>
+        </a>
+        <ul class="clearfix">
+            <li style="width: 74px">首页</li>
+            <li style="width: 148px">我的音乐</li>
+            <li style="width: 111px">排行榜</li>
+            <li style="width: 74px">歌手</li>
+            <li style="width: 185px">下载客户端</li>
+        </ul>
+        <div class="search">
+            <form action="https://www.baidu.com" method="get">
+                <input type="text" name="search">
+            </form>
+        </div>
+    </div>
+</div>
+{% block banner %}
+{% endblock %}
+<div class="footer clearfix">
+    <div class="description clearfix">
+
+        <p>
+            <a href="#">服务条款</a> | <a href="#">隐私政策</a> | <a href="#">儿童隐私政策</a> | <a href="#">版权投诉指引</a> | <a href="#">意见反馈</a>
+        </p>
+        <p>违法和不良信息举报电话：0571-89853516 举报邮箱：ncm5990@163.com</p>
+    </div>
+</div>
+</body>
+</html>

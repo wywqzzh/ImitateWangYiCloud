@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <link rel="icon" href="{{ url_for('static',filename='imgs/logo.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='imgs/logo.ico') }}" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/audio.css') }}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>LRC</title>
+    <script src="{{ url_for('static',filename='js/jquery-3.4.1.min.js') }}"></script>
+    <style>
+        .name {
+            padding: 50px 0 0 0;
+            margin: 0 auto;
+            color: #969696;
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
+        }
+
+        .div {
+            float: right;
+            width: 600px;
+            margin: 100px auto;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        ul {
+            transition-duration: 600ms;
+            margin: 50px auto;
+            height: 300px;
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block;
+            font-size: 20px;
+            color: #969696;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        li.on {
+            color: white;
+        }
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 30px;
+            line-height: 30px;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        audio {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="name">
+    <span id="SNAME">{{ SNAME }}</span>
+    <span id="VNAME">{{ VANME }}</span>
+</div>
+<div class="div">
+    <ul id="lrclist" style="transform: translateY(250px);"><!-- 保证歌词在正中间 -->
+    </ul>
+</div>
+<div class="audio"></div>
+<script>
+    var args={{ args|tojson }};
+</script>
+<script src="{{ url_for('static',filename='js/audio.js') }}"></script>
+</body>
+</html>
