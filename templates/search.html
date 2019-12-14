@@ -1,0 +1,188 @@
+{% extends 'headerAndFooter.html' %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/search.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='imgs/logo.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='imgs/logo.ico') }}" type="image/x-icon"/>
+    <script type="text/javascript" src="{{ url_for('static',filename="js/jquery-3.4.1.min.js") }}"></script>
+{% endblock %}
+
+
+{% block title %}
+    网易云音乐
+{% endblock %}
+{% block banner %}
+    {% set key='"'+key+'"' %}
+    <div class="main_box">
+        <div class="list_box">
+            <div class="list_title clearfix">
+                <span class="num_songLits">
+                    <span class="key">搜索{{ key }},找到</span>
+                    <span class="number_songLits">2</span>
+                    <span class="key">首歌</span>
+                </span>
+            </div>
+            <table class="list_table">
+                <thead class="thead">
+                <tr>
+                    <th class="w1">
+                        <div class="wp">&nbsp;</div>
+                    </th>
+                    <th class="w2">
+                        <div class="wp">歌曲标题</div>
+                    </th>
+                    <th class="w3">
+                        <div class="wp">时长</div>
+                    </th>
+                    <th class="w4">
+                        <div class="wp">歌手</div>
+                        <span id="hehe"></span>
+                    </th>
+                    {% set index=0 %}
+                </tr>
+                </thead>
+                <tbody>
+                <script>
+                    var tbody = document.getElementsByTagName('tbody')[0];
+                    var add = function (number, title, time, name,index,id) {
+                        var tr = document.createElement("tr");
+                        {#$('<tr></tr>').append('<td class="d1"><div class="td_first"><span class="number">'+number+'<span>'+'</div></td>')#}
+                        {#    .append('<td></td>').append('<td></td>').append('<td></td>').appendTo(tbody)#}
+                        var td1 = document.createElement("td");
+                        td1.className += 'd1';
+                        var td2 = document.createElement("td");
+                        td2.className += 'd2';
+                        var td3 = document.createElement("td");
+                        td3.className += 'd3';
+                        var td4 = document.createElement("td");
+                        td4.className += 'd4';
+
+                        var div_td_first = document.createElement('div');
+                        div_td_first.className += 'td_first';
+                        var div_td_second = document.createElement('div');
+                        div_td_second.className += 'td_second';
+                        var div_td_third = document.createElement('div');
+                        div_td_third.className += 'td_third';
+                        var div_td_fouth = document.createElement('div');
+                        div_td_fouth.className += 'td_fouth';
+
+                        var numSpan = document.createElement('span');
+                        numSpan.className += 'number';
+                        numSpan.innerHTML = number;
+                        var a = document.createElement('a');
+                        a.className += 'button';
+                        a.target='_blank';
+                        var f='{{ url_for('playerDeal',id=1,Type=type) }}'+'?ID='+id+"&index="+'0';
+                        a.href=f;
+                        {#a.href = '{{ url_for('playerDeal',id=id,Type=type,index=index) }}';#}
+                        var p2 = document.createElement('p');
+                        p2.innerHTML = title;
+                        var a3 = document.createElement('a');
+                        a3.innerHTML = time;
+                        a3.id = number;
+                        var p3 = document.createElement('p');
+                        p3.innerHTML = time;
+                        p3.id = number;
+                        var p4 = document.createElement('p');
+                        p4.innerHTML = name;
+
+                        div_td_first.appendChild(numSpan);
+                        div_td_first.appendChild(a);
+                        div_td_second.appendChild(p2);
+                        div_td_third.appendChild(a3);
+                        div_td_fouth.appendChild(p4);
+                        td1.appendChild(div_td_first);
+                        td2.appendChild(div_td_second);
+                        td3.appendChild(div_td_third);
+                        td4.appendChild(div_td_fouth);
+                        tr.appendChild(td1);
+                        tr.appendChild(td2);
+                        tr.appendChild(td3);
+                        tr.appendChild(td4);
+                        tbody.appendChild(tr);
+                    }
+                    var formatTime = function (time) {
+                        let formatTime = null,
+                            secs = 0,
+                            mins = 0,
+                            hours = 0,
+                            displayHours,
+                            seperator = ':';
+
+                        secs = parseInt(time % 60);
+                        mins = parseInt((time / 60) % 60);
+                        hours = parseInt(((time / 60) / 60) % 60);
+                        displayHours = (parseInt(((time / 60) / 60) % 60) > 0)
+                        secs = ("0" + secs).slice(-2);
+                        mins = ("0" + mins).slice(-2);
+                        return (displayHours ? hours + ':' : '') + mins + seperator + secs;
+                    }
+                    var args = {{ args|tojson }}
+                        document.getElementsByClassName("number_songLits")[0].innerHTML = args['snames'].length;
+                    var names = args['snames'];
+                    var aurls = args['saurls'];
+                    var sids=args['sids'];
+
+                    var vocalists = args['svocalists'];
+                    for (var i = 0; i < names.length; i++) {
+                        var f = '/static' + aurls[i];
+                        var audio = document.createElement("audio");
+                        audio.src = f;
+                        audio.id = i + 1;
+                        add(i + 1, names[i], "00:00", vocalists[i],i,sids[i]);
+                        audio.oncanplay = function () {
+                            var p = document.getElementById(this.id)
+                            p.innerHTML = formatTime(this.duration);
+                        }
+                    }
+                </script>
+                {#                <tr>#}
+                {#                    <td class="d1">#}
+                {#                        <div class="td_first">#}
+                {#                            <span class="number">1</span>#}
+                {#                            <a href="#" class="button"></a>#}
+                {#                        </div>#}
+                {#                    </td>#}
+                {#                    <td class="d2">#}
+                {#                        <div class="td_second">#}
+                {#                            <p>哈哈哈哈</p>#}
+                {#                        </div>#}
+                {#                    </td>#}
+                {#                    <td class="d3">#}
+                {#                        <div class="td_third">#}
+                {#                            <a href="#" class="button3"></a>#}
+                {#                        </div>#}
+                {#                    </td>#}
+                {#                    <td class="d4">#}
+                {#                        <div class="td_fouth">#}
+                {#                            <p>呵呵呵</p>#}
+                {#                        </div>#}
+                {#                    </td>#}
+                {#                </tr>#}
+                </tbody>
+            </table>
+            <script>
+                var $trs = $('tbody').find('tr');
+                for (var i = 0; i < $trs.length; i++) {
+                    var x = $trs.get(i).getElementsByClassName("td_third")[0].getElementsByTagName("a")[0];
+                    console.log(x);
+                    x.onmouseover = function () {
+                        var time = this.innerHTML;
+                        this.innerHTML = null;
+                        this.className = 'button3';
+                        this.onmouseout = function () {
+                            this.innerHTML = time;
+                            this.className = '';
+                        }
+                    }
+                    x.onclick = function () {
+                        this.innerHTML = null;
+                        this.className = 'button3';
+                    }
+                }
+
+            </script>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/register.css') }}">
+</head>
+<body>
+<div class="main_box">
+    <div class="label">
+        <p style="font-family: 'Times New Roman';">注册</p>
+    </div>
+    <div class="message">
+        <form action="/registerInterpretation" method="post" id="form">
+            <div class="username"><label>用&nbsp;户&nbsp;名：</label><input type="text" name="username"
+                                                                        style="height: 23px;" required><br></div>
+            <div class="nickname"><label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label><input type="text"
+                                                                                               name="nickname"
+                                                                                               style="height: 23px;"
+                                                                                               required
+                                                                                               maxlength="30px"><br>
+            </div>
+            <div class="password"><label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label><input type="password"
+                                                                                               name="password"
+                                                                                               style="height: 23px;"
+                                                                                               required minlength="8"
+                                                                                               maxlength="20"
+                                                                                               id="password">
+            </div>
+            <div class="password"><label>重复密码:</label><input type="password" name="repeatpassword" style="height: 23px;"
+                                                             equalTo="#password">
+            </div>
+            <div class="nickname"><label>密保问题:</label><input type="text" name="problem"
+                                                             style="height: 23px;" required maxlength="50"><br></div>
+            <div class="nickname"><label>密保答案：</label><input type="text" name="answer"
+                                                             style="height: 23px;" required maxlength="50"><br></div>
+            {% if error=='用户名已存在' %}
+                <script>alert('用户名已存在')</script>
+            {% endif %}
+            <div class="register"><input type="submit" value="注册" class="submit"></div>
+        </form>
+        <script src="../static/js/jquery-1.11.1.js"></script>
+        <script src="../static/js/jquery.validate.js"></script>
+        <script>
+            jQuery.validator.addMethod("mobile", function (value, element) {
+                var length = value.length;
+                var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/
+                return this.optional(element) || (length == 11 && mobile.test(value));
+            }, "手机号码格式错误");
+            $("form").validate({
+                errorElement: 'em',
+                rules: {
+                    username: {
+                        mobile: true
+                    }
+                },
+                messages: {
+                    username: {
+                        required: '用户名必须填写'
+                    },
+                    password: {
+                        required: '密码必须填写',
+                        minlength: "密码至少为8位",
+                        maxlength: "密码最多不超过20位"
+                    },
+                    repeatPassword: {
+                        equalTo: "必须与密码相同"
+                    },
+                    nickname: {
+                        required: '昵称必须填写',
+                        maxlength: "昵称最多不超过30位"
+                    },
+                    problem: {
+                        required: '密保问题必须填写'
+                    },
+                    answer: {
+                        required: '密保答案必须填写'
+                    }
+                }
+            })
+        </script>
+    </div>
+</div>
+</body>
+</html>

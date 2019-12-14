@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+</head>
+<body>
+<div class="main_box">
+    <div class="label">
+        <p style="font-family: 'Times New Roman';">欢迎登陆</p>
+    </div>
+    <div class="message">
+        <form action="/loginInterpretation" method="post">
+            <div class="username"><label>用户名：</label><input type="text" name="username" style="height: 23px;"><br></div>
+            <div class="password"><label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label><input type="password" name="password" style="height: 23px;"></div>
+            <em id="username-error" class="error">{{ error }}</em>
+            <div class="login"><input type="submit" value="登陆" class="submit"></div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

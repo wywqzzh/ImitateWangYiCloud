@@ -1,0 +1,103 @@
+{% extends 'headerAndFooter.html' %}
+
+{% block link %}
+    <link rel="icon" href="../static/imgs/logo.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../static/imgs/logo.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/mymusic.css') }}">
+{% endblock %}
+{% block title %}
+    {{ username }}
+{% endblock %}
+{% block banner %}
+    <div class="main_box">
+        <div class="box_top">
+            <a href="#">{{ args['name'] }}</a>
+        </div>
+        <div class="Content clearfix">
+            <div class="subImgContent">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+            <div class="subImgContent">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+            <div class="subImgContent">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+            <div class="subImgContent">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+            <div class="subImgContent" style="margin-right:0;">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+            <div class="subImgContent">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+            <div class="subImgContent">
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
+                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}
+                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
+            </div>
+        </div>
+        <script>
+            var Content = document.getElementsByClassName('Content')[0];
+            var add = function (name, id, num,username) {
+                var br = document.createElement("br");
+                var div = document.createElement("div");
+                div.className += 'subImgContent';
+                var a1 = document.createElement("a");
+                var h = '{{ url_for('AlbumAndList',id=0,type='LIST') }}' + '?id=' + id+'&username='+username;
+                a1.href = h;
+                var img = document.createElement("img");
+                img.src = "../static/imgs/LIST/" + id + ".jpg";
+                a1.appendChild(img);
+                div.appendChild(a1);
+                div.innerHTML+='<br/>';
+                var a2 = document.createElement("a");
+                a2.href = h;
+                a2.className += 'text_a';
+                console.log("name：",name.length);
+                for (var i = 0; i < name.length; i++) {
+                    if (i % 9 == 8) {
+                        a2.innerHTML += '<br>';
+                    } else {
+                        a2.innerHTML += name[i];
+                    }
+                }
+                {#a2.innerHTML=name;#}
+                div.appendChild(a2);
+                if (num % 5 == 4) {
+                    div.style.marginRight=0;
+                    console.log(num)
+                }
+                Content.appendChild(div);
+
+            }
+            var args = {{ args|tojson }}
+                console.log(args);
+            var lists = args['lists'];
+            for (var i = 0; i < lists.length; i++) {
+                console.log(i);
+                add(lists[i]['name'], lists[i]['id'], i + 7,args['username']);
+            }
+        </script>
+    </div>
+{% endblock %}

@@ -1,11 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！</title>
+    <script src="../static/js/jquery-1.11.1.js"></script>
 </head>
 <body>
-<audio src="../static/audio/张杰,莫文蔚%20-%20一念之间.flac" controls></audio>
+<audio src="../static/audio/600446650000001.flac" controls></audio>
+<script>
+    var myaudio = document.getElementsByTagName("audio")[0]
+    var time=0;
+    myaudio.ondurationchange = function () {
+        time=
+        alert(myaudio.duration);
+    }
+</script>
 </body>
 </html>

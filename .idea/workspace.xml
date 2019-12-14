@@ -4,7 +4,372 @@
     <bookmark url="file://$PROJECT_DIR$/test.py" line="14" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7098fe8a-6883-4eca-892e-54b28895b1f8" name="Default Changelist" comment="" />
+    <list default="true" id="7098fe8a-6883-4eca-892e-54b28895b1f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/leaderboardController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/usersController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/Leaderboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/users.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/mymusic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/login/304230.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/Gruntfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/ajaxSubmit-integration-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/captcha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/fonts/Anorexia.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/image_req.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/images/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/images/image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/newsession.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/process.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/rand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/captcha/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/css/cmxform.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/css/cmxformTemplate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/css/core.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/css/screen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/custom-messages-data-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/custom-methods-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/dynamic-totals.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/errorcontainer-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/errors-within-labels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/file_input.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/images/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/images/checked.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/images/cmxform-divider.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/images/cmxform-fieldset.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/images/unchecked.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/jquerymobile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/login/images/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/login/images/header1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/login/images/page.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/login/images/required_star.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/login/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/login/screen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/backRequiredGray.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/back_green-fade.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/back_nav_blue.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/blank.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/button-submit.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/left-nav-callout-long.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/login-sprite.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/logo_marketo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/sf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/step1-24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/step2-24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/step3-24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/tab-sprite.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/tab_green.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/toggle.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/images/warning.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/jquery.maskedinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/mktSignup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/step2.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/marketo/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/milk/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/milk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/milk/left_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/milk/milk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/milk/milk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/milk/right_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/multipart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/multipart/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/radio-checkbox-select-demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/requirejs/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/requirejs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/site-demos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/themerollered.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce/themes/simple/editor_template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce/themes/simple/img/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce/themes/simple/langs/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce/themes/simple/skins/default/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce/tiny_mce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/demo/tinymce4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/additional-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_bg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_bn_BD.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_bn_BD.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ca.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_cs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_da.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_de.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_el.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_es.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_es_AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_es_AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_es_PE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_es_PE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_et.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_eu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_fa.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_fi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_fr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ge.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_gl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_he.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_hr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_hu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_hy_AM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_hy_AM.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_id.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_is.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_it.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ja.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ka.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_kk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ko.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_lt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_lv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_my.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_my.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_nl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_no.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_pl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_pt_BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_pt_BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_pt_PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_pt_PT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ro.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_ru.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_si.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sr_lat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sr_lat.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_sv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_th.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_tj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_tj.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_tr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_uk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_vi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_zh.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/messages_zh_TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_de.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_es_CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_es_CL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_fi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_nl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/dist/localization/methods_pt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery-1.11.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery-1.7.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery-1.8.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery-1.9.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery.form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery.mockjax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery.simulate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/accept.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/additional.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/alphanumeric.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/bankaccountNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/bankorgiroaccountNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/bic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/cifES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/cpfBR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/creditcardtypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/currency.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/dateFA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/dateITA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/dateNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/extension.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/giroaccountNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/iban.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/integer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/ipv4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/ipv6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/lettersonly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/letterswithbasicpunc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/mobileNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/mobileUK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/nieES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/nifES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/notEqualTo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/nowhitespace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/pattern.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/phoneNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/phoneUK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/phoneUS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/phonesUK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/postalCodeCA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/postalcodeBR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/postalcodeIT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/postalcodeNL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/postcodeUK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/require_from_group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/skip_or_fill_minimum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/statesUS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/strippedminlength.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/time12h.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/url2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/vinUS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/zipcodeUS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/additional/ziprange.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_bn_BD.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_es_AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_es_PE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_hy_AM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_my.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_pt_BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_pt_PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_sr_lat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_tj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/messages_zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/methods_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/methods_es_CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/methods_fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/methods_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/src/localization/methods_pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/aria.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/error-placement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/messages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/qunit/qunit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/qunit/qunit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/rules.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/jquery-validation-1.14.0/test/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-1.11.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mymusic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb955f8b-9780-421a-83e1-571fd90ebe38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb955f8b-9780-421a-83e1-571fd90ebe38.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cb955f8b-9780-421a-83e1-571fd90ebe38/storage_v2/_src_/database/MusicSystem.lAT-rQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cb955f8b-9780-421a-83e1-571fd90ebe38/storage_v2/_src_/database/MusicSystem.lAT-rQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Relation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Relation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusicDatabase/~$sicSystem.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/songController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/songController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/implement/implement.py" beforeDir="false" afterPath="$PROJECT_DIR$/implement/implement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/song.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/song.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/AlbumAndList.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/AlbumAndList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/audio.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/audio.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/headerAndFooter.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/headerAndFooter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/audio.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/audio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/AlbumAndList.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/AlbumAndList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/headerAndFooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headerAndFooter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Mysnow.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Mysnow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/SONG_VOCALIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/SONG_VOCALIST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +411,79 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+            <state relative-caret-position="537">
+              <caret line="151" column="11" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
+              <folding>
+                <element signature="e#482#830#0" />
+                <element signature="e#1037#1625#0" />
+                <element signature="e#1705#1935#0" />
+                <element signature="e#1975#2010#0" />
+                <element signature="e#2052#2099#0" />
+                <element signature="e#2194#2565#0" />
+                <element signature="e#2613#2653#0" />
+                <element signature="e#2754#3286#0" />
+                <element signature="e#3330#3480#0" />
+                <element signature="e#3577#3818#0" />
+                <element signature="e#3896#4041#0" />
+                <element signature="e#4088#4188#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/usersController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/users.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/songController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="628">
+              <caret line="147" column="26" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mymusic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="37" />
+              <folding>
+                <element signature="e#2334#2357#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/leaderboardController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -56,59 +492,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/AlbumAndList.html">
+        <entry file="file://$PROJECT_DIR$/service/song.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="111" column="42" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
+            <state relative-caret-position="619">
+              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
               <folding>
-                <element signature="e#431#1220#0#HTML" />
-                <element signature="e#509#653#0#HTML" />
-                <element signature="e#1225#1488#0#HTML" />
-                <element signature="e#1559#1608#0#HTML" />
-                <element signature="e#1797#1803#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tools/SONG_VOCALIST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Relation.py">
+        <entry file="file://$PROJECT_DIR$/static/css/mymusic.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="60" column="34" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="34" />
+            <state relative-caret-position="510">
+              <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement/implement.py">
+        <entry file="file://$PROJECT_DIR$/static/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-              <folding>
-                <element signature="e#11#47#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="219">
+              <caret line="133" column="26" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb955f8b-9780-421a-83e1-571fd90ebe38/console.sql">
+        <entry file="file://$PROJECT_DIR$/templates/headerAndFooter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="183" lean-forward="true" selection-start-line="183" selection-end-line="183" />
+            <state relative-caret-position="-527">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -119,103 +536,112 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>carousel-control-next-icon</find>
-      <find>carousel-control-next</find>
-      <find>sessionmaker</find>
-      <find>SAUDIOURL</find>
-      <find>SID</find>
-      <find>changeStateIcon</find>
-      <find>暂停</find>
-      <find>changeState</find>
-      <find>currentClass</find>
-      <find>click</find>
-      <find>Controller</find>
-      <find>console</find>
-      <find>console.log</find>
-      <find>srcs</find>
-      <find>next</find>
-      <find>play</find>
-      <find>id</find>
-      <find>set</find>
-      <find>f_popup</find>
-      <find>clearfix</find>
-      <find>clear</find>
-      <find>box1</find>
-      <find>top</find>
-      <find>a</find>
-      <find>d3d3d3</find>
-      <find>hover</find>
-      <find>top_title</find>
-      <find>des</find>
+      <find>type</find>
       <find>main</find>
-      <find>cl</find>
+      <find>required</find>
+      <find>Please enter</find>
+      <find>number</find>
+      <find>user</find>
+      <find>used</find>
+      <find>number_songLits</find>
+      <find>change</find>
+      <find>pre</find>
+      <find>新歌</find>
+      <find>audio</find>
+      <find>pr</find>
+      <find>console</find>
+      <find>index</find>
+      <find>args</find>
+      <find>aj</find>
+      <find>pause</find>
+      <find>play</find>
+      <find>url_for</find>
+      <find>LIST_SONG</find>
+      <find>LIST</find>
+      <find>box_top</find>
+      <find>subImgContent</find>
+      <find>img</find>
+      <find>li</find>
+      <find>print</find>
+      <find>登</find>
+      <find>Content</find>
+      <find>username</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/home.py" />
-        <option value="$PROJECT_DIR$/templates/home_test.py" />
-        <option value="$PROJECT_DIR$/templates/home_test.html" />
-        <option value="$PROJECT_DIR$/static/css/base.css" />
-        <option value="$PROJECT_DIR$/static/css/index.css" />
-        <option value="$PROJECT_DIR$/templates/my_home.html" />
-        <option value="$PROJECT_DIR$/static/css/home2.css" />
-        <option value="$PROJECT_DIR$/templates/home1.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/HeadAndFooter.html" />
-        <option value="$PROJECT_DIR$/templates/HeaderAndFooter.html" />
         <option value="$PROJECT_DIR$/static/js/home.js" />
         <option value="$PROJECT_DIR$/static/css/test.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/732901a4-8a64-4deb-950a-930464d606c0/console.sql" />
         <option value="$PROJECT_DIR$/data.py" />
         <option value="$PROJECT_DIR$/Model/SC.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e1bff65c-2a8e-4cd8-a393-5d5140ee41d1/console.sql" />
-        <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/DataBase/sing.py" />
         <option value="$PROJECT_DIR$/DataBase/song.py" />
         <option value="$PROJECT_DIR$/DataBase/Image.py" />
         <option value="$PROJECT_DIR$/Model/song.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/tools/tools.py" />
-        <option value="$PROJECT_DIR$/static/js/audio.js" />
         <option value="$PROJECT_DIR$/templates/player.html" />
-        <option value="$PROJECT_DIR$/tools/Mysnow.py" />
         <option value="$PROJECT_DIR$/python_1.py" />
         <option value="$PROJECT_DIR$/python_3.py" />
         <option value="$PROJECT_DIR$/python_2.py" />
         <option value="$PROJECT_DIR$/python_4.py" />
-        <option value="$PROJECT_DIR$/static/css/headerAndFooter.css" />
-        <option value="$PROJECT_DIR$/static/css/home.css" />
-        <option value="$PROJECT_DIR$/static/css/audio.css" />
-        <option value="$PROJECT_DIR$/Model/Base.py" />
-        <option value="$PROJECT_DIR$/service/song.py" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/controller/songController.py" />
-        <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/templates/headerAndFooter.html" />
+        <option value="$PROJECT_DIR$/tools/SONG_VOCALIST.py" />
+        <option value="$PROJECT_DIR$/tools/tools.py" />
+        <option value="$PROJECT_DIR$/scores.csv" />
         <option value="$PROJECT_DIR$/static/css/AlbumAndList.css" />
+        <option value="$PROJECT_DIR$/templates/Register.html" />
+        <option value="$PROJECT_DIR$/static/css/Register.css" />
+        <option value="$PROJECT_DIR$/static/js/jquery.validate.js" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/static/css/login.css" />
+        <option value="$PROJECT_DIR$/static/css/register.css" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/Model/Base.py" />
+        <option value="$PROJECT_DIR$/static/css/search.css" />
         <option value="$PROJECT_DIR$/templates/AlbumAndList.html" />
+        <option value="$PROJECT_DIR$/templates/search.html" />
+        <option value="$PROJECT_DIR$/static/css/audio.css" />
+        <option value="$PROJECT_DIR$/tools/Mysnow.py" />
+        <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/static/js/audio.js" />
+        <option value="$PROJECT_DIR$/service/Leaderboard.py" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/static/css/home.css" />
+        <option value="$PROJECT_DIR$/static/css/headerAndFooter.css" />
+        <option value="$PROJECT_DIR$/controller/leaderboardController.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb955f8b-9780-421a-83e1-571fd90ebe38/console.sql" />
         <option value="$PROJECT_DIR$/Model/Relation.py" />
         <option value="$PROJECT_DIR$/implement/implement.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cb955f8b-9780-421a-83e1-571fd90ebe38/console.sql" />
-        <option value="$PROJECT_DIR$/tools/SONG_VOCALIST.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/static/css/playlist.css" />
+        <option value="$PROJECT_DIR$/templates/playlist.html" />
+        <option value="$PROJECT_DIR$/controller/usersController.py" />
+        <option value="$PROJECT_DIR$/templates/headerAndFooter.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/service/users.py" />
+        <option value="$PROJECT_DIR$/service/song.py" />
+        <option value="$PROJECT_DIR$/controller/songController.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-5" />
+    <option name="x" value="-8" />
     <option name="y" value="1" />
-    <option name="width" value="1288" />
-    <option name="height" value="697" />
+    <option name="width" value="2898" />
+    <option name="height" value="1569" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -231,17 +657,12 @@
             <path>
               <item name="网易云音乐2" type="b2602c69:ProjectViewProjectNode" />
               <item name="网易云音乐2" type="462c0819:PsiDirectoryNode" />
-              <item name="implement" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="网易云音乐2" type="b2602c69:ProjectViewProjectNode" />
               <item name="网易云音乐2" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="网易云音乐2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="网易云音乐2" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,9 +674,10 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb&#10;sqlserver" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cs294-homework-master" />
+    <property name="last_opened_file_path" value="F:/workspace/pycharm_project/untitled1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -265,18 +687,18 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\audio" />
-      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\imgs\SONG" />
-      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\words" />
-      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\imgs\LIST" />
-      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\imgs\ALBUM" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\76774\Desktop\网易云音乐\static\imgs\Carousel" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\css" />
+      <recent name="C:\Users\76774\Desktop\网易云音乐2\templates" />
+      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\js" />
+      <recent name="C:\Users\76774\Desktop\网易云音乐2\static" />
+      <recent name="C:\Users\76774\Desktop\网易云音乐2\static\imgs\login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,8 +713,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.SONG_VOCALIST">
-    <configuration name="SONG_VOCALIST" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.song">
+    <configuration name="Relation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="网易云音乐" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,12 +722,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/SONG_VOCALIST.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Model/Relation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,7 +736,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="python_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="implement" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="网易云音乐" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -322,34 +744,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implement" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="python_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="网易云音乐" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implement/implement.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,6 +772,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/song.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="网易云音乐" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -412,11 +834,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SONG_VOCALIST" />
-        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.song" />
-        <item itemvalue="Python.python_4" />
-        <item itemvalue="Python.python_2" />
+        <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.Relation" />
+        <item itemvalue="Python.implement" />
       </list>
     </recent_temporary>
   </component>
@@ -479,48 +901,81 @@
       <workItem from="1575037211302" duration="4661000" />
       <workItem from="1575077733883" duration="61000" />
       <workItem from="1575099412007" duration="19538000" />
+      <workItem from="1575163429681" duration="21518000" />
+      <workItem from="1575196532488" duration="782000" />
+      <workItem from="1575198856626" duration="16000" />
+      <workItem from="1575199043346" duration="3233000" />
+      <workItem from="1575202319138" duration="4735000" />
+      <workItem from="1575250921990" duration="2666000" />
+      <workItem from="1575254705414" duration="192000" />
+      <workItem from="1575254929039" duration="247000" />
+      <workItem from="1575293325293" duration="570000" />
+      <workItem from="1575458680733" duration="7231000" />
+      <workItem from="1575466475806" duration="8000" />
+      <workItem from="1575613577271" duration="1208000" />
+      <workItem from="1575719765764" duration="104000" />
+      <workItem from="1575719890654" duration="5351000" />
+      <workItem from="1575762922623" duration="9405000" />
+      <workItem from="1575772365573" duration="11648000" />
+      <workItem from="1575793869800" duration="9495000" />
+      <workItem from="1575897378776" duration="661000" />
+      <workItem from="1576128709635" duration="5991000" />
+      <workItem from="1576135091118" duration="2563000" />
+      <workItem from="1576140432961" duration="1148000" />
+      <workItem from="1576224610476" duration="648000" />
+      <workItem from="1576233880467" duration="5780000" />
+      <workItem from="1576285258614" duration="9668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215453000" />
+    <option name="totallyTimeSpent" value="320321000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16208637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13432837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45171338" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19956616" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39802632" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.336858" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32894737" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.335141" />
       <window_info anchor="bottom" id="SQL Generator" order="14" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32851836" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32777116" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119273625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10523504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32854986" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28179824" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39802632" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -530,19 +985,33 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Database Console" order="13" visible="true" weight="0.336858" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="13" visible="true" weight="0.33552632" />
       <window_info anchor="bottom" id="SQL Generator" order="14" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32893106" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32799146" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/SONG_VOCALIST.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/controller/leaderboardController.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="resultExpr" language="Python" />
@@ -552,25 +1021,31 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2$python_4.coverage" NAME="python_4 Coverage Results" MODIFIED="1574938464837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/2$python_1.coverage" NAME="python_1 Coverage Results" MODIFIED="1574904332500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$app.coverage" NAME="app Coverage Results" MODIFIED="1574422278116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/2$Mysnow.coverage" NAME="Mysnow Coverage Results" MODIFIED="1574836830034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/$SC.coverage" NAME="SC Coverage Results" MODIFIED="1574081021694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/$test.coverage" NAME="test Coverage Results" MODIFIED="1574082611017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/2$Relation.coverage" NAME="Relation Coverage Results" MODIFIED="1574504897990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
-    <SUITE FILE_PATH="coverage/2$song.coverage" NAME="song Coverage Results" MODIFIED="1575039433874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
+    <SUITE FILE_PATH="coverage/2$song.coverage" NAME="song Coverage Results" MODIFIED="1576302920810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
     <SUITE FILE_PATH="coverage/2$python_3.coverage" NAME="python_3 Coverage Results" MODIFIED="1574918248538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$Image.coverage" NAME="Image Coverage Results" MODIFIED="1574085642628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataBase" />
+    <SUITE FILE_PATH="coverage/2$Base.coverage" NAME="Base Coverage Results" MODIFIED="1575769244725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
+    <SUITE FILE_PATH="coverage/2$songController.coverage" NAME="songController Coverage Results" MODIFIED="1575785653386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/2$tools.coverage" NAME="tools Coverage Results" MODIFIED="1575191221363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/2$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1576302373932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$data.coverage" NAME="data Coverage Results" MODIFIED="1574080585876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2$test.coverage" NAME="test Coverage Results" MODIFIED="1576286654687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2$SONG_VOCALIST.coverage" NAME="SONG_VOCALIST Coverage Results" MODIFIED="1575164546075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/2$python_4.coverage" NAME="python_4 Coverage Results" MODIFIED="1574938464837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2$python_1.coverage" NAME="python_1 Coverage Results" MODIFIED="1574904332500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2$Mysnow.coverage" NAME="Mysnow Coverage Results" MODIFIED="1574836830034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/2$Leaderboard.coverage" NAME="Leaderboard Coverage Results" MODIFIED="1576132469291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
+    <SUITE FILE_PATH="coverage/2$Relation.coverage" NAME="Relation Coverage Results" MODIFIED="1576286282258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/$tools.coverage" NAME="tools Coverage Results" MODIFIED="1574401115954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/$song.coverage" NAME="song Coverage Results" MODIFIED="1574401033818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
-    <SUITE FILE_PATH="coverage/2$Base.coverage" NAME="Base Coverage Results" MODIFIED="1574502490496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1574425929522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$implement.coverage" NAME="implement Coverage Results" MODIFIED="1574395670389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implement" />
-    <SUITE FILE_PATH="coverage/2$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1575099420546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$data.coverage" NAME="data Coverage Results" MODIFIED="1574080585876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2$implement.coverage" NAME="implement Coverage Results" MODIFIED="1576133219208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implement" />
+    <SUITE FILE_PATH="coverage/2$leaderboardController.coverage" NAME="leaderboardController Coverage Results" MODIFIED="1575808320479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
     <SUITE FILE_PATH="coverage/2$python_2.coverage" NAME="python_2 Coverage Results" MODIFIED="1574937996185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/2$SONG_VOCALIST.coverage" NAME="SONG_VOCALIST Coverage Results" MODIFIED="1575120193808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -592,193 +1067,14 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/bg1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/bg1_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/pre2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/pre1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/next1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/next2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/Carousel/bg3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/words/599592620000001.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/words/599607140000001.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/SONG/599607140000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/SONG/599592620000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/audio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5220">
-          <caret line="174" column="6" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/Mysnow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_3.py" />
-    <entry file="file://F:/Python/Python36/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="1704" selection-start-line="1704" selection-end-line="1704" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_2.py" />
-    <entry file="file://$PROJECT_DIR$/python_4.py" />
-    <entry file="file://$PROJECT_DIR$/static/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/test.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199350">
-          <caret line="6645" column="1" selection-start-line="6645" selection-start-column="1" selection-end-line="6645" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/ALBUM/602702510000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/ALBUM/602673630000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/ALBUM/600441330000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/ALBUM/599615650000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/ALBUM/602712780000001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/headerAndFooter.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1684">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/words/1397124008.txt" />
-    <entry file="file://$PROJECT_DIR$/static/words/602739940000001.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/audio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/AlumAndList/Label_Album.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/imgs/AlumAndList/top_image_border.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/imgs/AlumAndList/Label_List.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="88" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="140" column="142" selection-start-line="140" selection-start-column="142" selection-end-line="140" selection-end-column="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/headerAndFooter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="16" column="72" lean-forward="true" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/imgs/AlumAndList/Favorite1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/imgs/AlumAndList/Favorite2.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/AlbumAndList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="235" column="1" lean-forward="true" selection-start-line="235" selection-start-column="1" selection-end-line="235" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/songController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -790,77 +1086,363 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tools/SONG_VOCALIST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/words/602678310000001.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scores.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/words/602675570000001.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1214" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/python_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
+        <state relative-caret-position="2430">
           <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/tools.py">
+    <entry file="file://F:/Python/Python36/Lib/site-packages/jinja2/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14220">
+          <caret line="496" selection-start-line="496" selection-end-line="496" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/words/600933640000001.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199350">
+          <caret line="6645" column="1" selection-start-line="6645" selection-start-column="1" selection-end-line="6645" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.11.1.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/jquery-validation-1.14.0/lib/jquery.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://F:/Python/Python36/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61110">
+          <caret line="2096" selection-start-line="2096" selection-end-line="2096" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9810">
+          <caret line="334" column="25" selection-start-line="334" selection-start-column="25" selection-end-line="334" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement/implement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+        <state relative-caret-position="210">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="40" />
           <folding>
-            <element signature="e#11#47#0" expanded="true" />
+            <element signature="e#0#83#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/AlbumAndList.html">
+    <entry file="file://$PROJECT_DIR$/static/css/register.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="111" column="42" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="42" />
-          <folding>
-            <element signature="e#431#1220#0#HTML" />
-            <element signature="e#509#653#0#HTML" />
-            <element signature="e#1225#1488#0#HTML" />
-            <element signature="e#1559#1608#0#HTML" />
-            <element signature="e#1797#1803#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="455">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/static/css/search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+        <state relative-caret-position="281">
+          <caret line="97" column="1" lean-forward="true" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="75" column="98" selection-start-line="75" selection-start-column="98" selection-end-line="75" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/audio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/Mysnow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/Leaderboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Relation.py">
+    <entry file="file://$PROJECT_DIR$/templates/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="60" column="34" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="34" />
+        <state relative-caret-position="240">
+          <caret line="8" column="88" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/words/599592620000001.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/audio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="141" column="42" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/headerAndFooter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb955f8b-9780-421a-83e1-571fd90ebe38/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="183" lean-forward="true" selection-start-line="183" selection-end-line="183" />
+        <state relative-caret-position="352">
+          <caret line="278" selection-start-line="278" selection-end-line="278" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/SONG_VOCALIST.py">
+    <entry file="file://$PROJECT_DIR$/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" selection-start-line="16" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Relation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="100" selection-start-line="100" selection-start-column="2" selection-end-line="101" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implement/implement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="200" column="125" selection-start-line="200" selection-start-column="117" selection-end-line="200" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/AlbumAndList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="62" column="74" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/AlbumAndList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="133" column="26" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/mymusic.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/headerAndFooter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="151" column="11" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
+          <folding>
+            <element signature="e#482#830#0" />
+            <element signature="e#1037#1625#0" />
+            <element signature="e#1705#1935#0" />
+            <element signature="e#1975#2010#0" />
+            <element signature="e#2052#2099#0" />
+            <element signature="e#2194#2565#0" />
+            <element signature="e#2613#2653#0" />
+            <element signature="e#2754#3286#0" />
+            <element signature="e#3330#3480#0" />
+            <element signature="e#3577#3818#0" />
+            <element signature="e#3896#4041#0" />
+            <element signature="e#4088#4188#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mymusic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="37" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#2334#2357#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/leaderboardController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/song.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/usersController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/songController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="147" column="26" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

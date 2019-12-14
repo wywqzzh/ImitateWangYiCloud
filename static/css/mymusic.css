@@ -1,0 +1,58 @@
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+
+* {
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+}
+
+.main_box {
+    width: 880px;
+    margin: 0 auto;
+    height: 1100px;
+    border: 1px solid #e1e1e1;
+    border-top: none;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.box_top {
+    width: 880px;
+    height: 65px;
+    line-height: 65px;
+    border-bottom: 2px solid #c10d0c;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.box_top a {
+    list-style: none;
+    line-height: 65px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 25px;
+}
+
+.subImgContent {
+    margin-right: 54px;
+    float: left;
+}
+
+
+.subImgContent .text_a {
+    color: #191919;
+    text-decoration: none;
+}
+
+.subImgContent .text_a:hover {
+    border-bottom: 1px solid #191919;
+}
+
+.Content img{
+    width: 132px;
+    height: 132px;
+}

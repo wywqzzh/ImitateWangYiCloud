@@ -5,8 +5,13 @@ def getJsonByPath(path):
     x = ''
     c = {}
     while line:
-        c.update({line[:11]: line[11:]})
+        x=0
+        for i in range(2,len(line)):
+            if(line[i]==']'):
+                x=i
+                break
+        c.update({line[:x+1]: line[x+1:]})
         line = f.readline()
         line = line[:-1]
     return c
-# print(getJsonByPath('../static/words/1403757375.txt'))
+

@@ -34,5 +34,3 @@ class MySnow:
             countIDdata = s + countIDdata
         id = str(temp) + str(self.dataID) + countIDdata
         return id
-s=MySnow()
-print(s.get_id())

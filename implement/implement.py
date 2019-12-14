@@ -1,13 +1,15 @@
 # db_mg.py
-from sqlalchemy import create_engine
+# from sqlalchemy import create_engine
+# from sqlalchemy.orm import sessionmaker
+# from Model.SC import Course
+# from sqlalchemy import Column, CHAR, VARCHAR, SMALLINT, Boolean, func,and_
+# from sqlalchemy.ext.declarative import declarative_base
+# from Model.Base import USERS
+# from Model.Relation import Leaderboard
 from sqlalchemy.orm import sessionmaker
-from Model.SC import Course
-import sqlalchemy
-from sqlalchemy import Column, CHAR, VARCHAR, SMALLINT, Boolean, func
+from sqlalchemy import desc
 import urllib
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-
+import sqlalchemy
 
 class implement_actions():
     def __init__(self):
@@ -24,6 +26,29 @@ class implement_actions():
         self.session.commit()  # 提交
         return obj
 
+    def add_user(self, ID, NIKENAME, PASSWORD, PROBLEM, ANSWER):
+        sql = "INSERT INTO USERS(ID, NICKNAME, PASSWORD, PROBLEM, ANSWER) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(
+            ID, NIKENAME, PASSWORD, PROBLEM, ANSWER)
+        conn = self.engine.connect()
+        conn.execute(sql)
+        conn.close()
+
+    def add_list(self, ID, LNAME, URL):
+        sql = "INSERT INTO LIST(ID, NAME, URL) VALUES ('{0}','{1}','{2}')".format(ID, LNAME, URL)
+        conn = self.engine.connect()
+        conn.execute(sql)
+        conn.close()
+
+    def add_list_song(self, LID, SID):
+        sql = "INSERT INTO LIST_SONG(LID, SID) VALUES ('{0}','{1}')".format(LID, SID)
+        conn = self.engine.connect()
+        conn.execute(sql)
+        conn.close()
+    def add_user_list(self,UID,LID):
+        sql = "INSERT INTO USER_LIST(UID, LID) VALUES ('{0}','{1}')".format(UID, LID)
+        conn = self.engine.connect()
+        conn.execute(sql)
+        conn.close()
     def query_all(self, target_class, query_filter):  # 查询内容
         result_list = self.session.query(target_class).filter(query_filter).all()
         return result_list
@@ -45,3 +70,15 @@ class implement_actions():
 
     def execute_sql(self, sql_str):  # 执行sql语句
         return self.session.execute(sql_str)
+
+    def query_all_order(self, target_class, query_filter, order):
+        result_list = self.session.query(target_class).filter(query_filter).order_by(desc(order)).all()
+        return result_list
+
+# user=USERS(15837716655,'hehe','wywq100539','ss','ss')
+# im=implement_actions()
+# im.add_user(15837716655,'hehe','wywq100539','ss','ss')
+# q=Leaderboard.SID==599592620000001
+# update_hash={"NUM":2,"DNUM":1}
+# s=im.update_by_filter(Leaderboard,update_hash,q)
+# print(len(s))

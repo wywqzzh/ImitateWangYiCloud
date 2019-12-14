@@ -1,0 +1,66 @@
+body{
+    background: url("../imgs/login/304230.jpg");
+    padding-top: 140px;
+    padding-left: 600px;
+}
+.main_box{
+    height: 640px;
+    width: 600px;
+    background:black;
+    opacity:0.5;
+    padding-top: 20px;
+}
+.label{
+    color: white;
+    opacity:1;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+.message{
+    color: white;
+    font-size: 20px;
+    /*text-align: center;*/
+    padding-left: 150px;
+}
+label{
+    display: inline-flex;
+    text-align: left;
+    width: 100px;
+    height: 26px;
+}
+.password{
+    margin-top:40px ;
+}
+
+.register{
+    margin-top: 40px;
+}
+
+.message .submit{
+    width: 173px;
+    margin-left: 100px;
+    font-size: large;
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+
+.nickname{
+    margin-top: 40px;
+}
+em{
+    font-size: 10px;
+    color: #e81919;
+}
+.error{
+    display: block;
+    font-size:10px ;
+    color: #e81919;
+    margin-top: 50px;
+    margin: 50px auto auto auto;
+}

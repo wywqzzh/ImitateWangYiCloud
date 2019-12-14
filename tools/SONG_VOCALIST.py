@@ -10,11 +10,7 @@ def main():
     for r in result:
         f=SONG_VOCALIST.SID==r.SID and SONG_VOCALIST.VID==r.VID
         R=im.query_all(SONG_VOCALIST,f)
-        print(len(R))
-        print(r.VID)
-        if(len(R)<=0):
-            song_vocalist=SONG_VOCALIST(r.SID,r.VID)
-            im.add_obj(song_vocalist)
+        print('('+str(r.SID)+','+str(r.VID)+'),')
 if __name__ == '__main__':
     # im=implement_actions()
     # f=VOCALIST.ID==600440230000001

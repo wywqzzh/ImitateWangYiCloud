@@ -13,15 +13,9 @@ from sqlalchemy import Column,CHAR,VARCHAR,SMALLINT,Boolean,func
 # s=session.query(Course).filter(Course.sssss==1).all()
 # for i in courses:
 #     print(type(i))
-def getJsonByPath(path):
-    f = open('', encoding='UTF-8')  # 设置文件对象
-    line = f.readline()
-    line = line[:-1]
-    x = ''
-    c = {}
-    while line:
-        c.update({line[:11]: line[11:]})
-        line = f.readline()
-        line = line[:-1]
-    return c
-
+import time
+x={}
+s='123'
+ss=3
+x.update({s:ss})
+print(x)

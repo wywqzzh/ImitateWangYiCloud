@@ -1,0 +1,56 @@
+body{
+    background: url("../imgs/login/304230.jpg");
+    padding-top: 250px;
+    padding-left: 600px;
+}
+.main_box{
+    height: 400px;
+    width: 600px;
+    background:black;
+    opacity:0.5;
+    padding-top: 20px;
+}
+.label{
+    color: white;
+    opacity:1;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+.message{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+label{
+    display: inline-flex;
+    text-align: left;
+    width: 80px;
+    height: 26px;
+}
+.password{
+    margin-top:40px ;
+}
+
+.login{
+    margin-top: 20px;
+}
+
+.message .submit{
+    width: 173px;
+    margin-left: 80px;
+    font-size: large;
+    font-weight: bold;
+    background: black;
+    color: white;
+}
+
+.submit:hover{
+    cursor: pointer;
+}
+.error{
+    display: block;
+    font-size:10px ;
+    color: #e81919;
+    margin-top: 20px;
+}

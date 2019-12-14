@@ -42,7 +42,7 @@ body{
     /*background: blue;*/
     height: 70px;
 }
-.top1 ul>li{
+.top1 ul li{
     float: left;
     color: #ffffff;
     font-size: 16px;
@@ -50,18 +50,31 @@ body{
     line-height: 70px;
     cursor: pointer;
 }
-.top1 ul>li:hover{
+.top1 ul li:hover{
+    background: black;
+}
+.top1 ul a{
+    display: block;
+    float: left;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    list-style: none;
+}
+.top1 ul>a:hover{
     background: black;
 }
 .top .search{
     height: 70px;
-    width: 260px;
+    width: 180px;
     text-align: right;
     float: left;
     line-height: 70px;
 }
 .search input{
-    height: 32px;
+    height: 28px;
     border-radius: 20px;
 }
 .footer{
@@ -85,4 +98,14 @@ body{
     font: 11px 'Myriad Pro';
     text-decoration: none;
     height: 30px;
+}
+.top .login{
+    height: 70px;
+    width: 50px;
+    padding-left: 30px;
+    float: left;
+    line-height: 70px;
+}
+.login a{
+    font-size: 16px;
 }

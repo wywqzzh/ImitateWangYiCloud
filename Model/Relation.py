@@ -1,6 +1,5 @@
 from sqlalchemy import Column, String, INT, CHAR, VARCHAR, SMALLINT, Boolean, PrimaryKeyConstraint, BIGINT, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from implement.implement import implement_actions
 
 Base = declarative_base()
 
@@ -69,7 +68,44 @@ class SONG_VOCALIST(Base):
         self.SID = SID
         self.VID = VID
 
+
+class Leaderboard(Base):
+    __tablename__ = 'Leaderboard'
+    SID = Column(BIGINT, primary_key=True)
+    INITTIME = Column(BIGINT, nullable=False)
+    PRETIME = Column(BIGINT, nullable=False)
+    PRENUM = Column(BIGINT, nullable=False)
+    NUM = Column(BIGINT, nullable=False)
+    DNUM = Column(BIGINT, nullable=False)
+
+    def __init__(self, SID, INITTIME, PRETIME, PRENUM, NUM, DNUM):
+        self.SID = SID
+        self.INITTIME = INITTIME
+        self.PRETIME = PRETIME
+        self.PRENUM = PRENUM
+        self.NUM = NUM
+        self.DNUM = DNUM
+
+
+
+class USER_LIST(Base):
+    __tablename__ = 'USER_LIST'
+    UID=Column(BIGINT,ForeignKey("USERS.ID"))
+    LID=Column(BIGINT,ForeignKey("LIST.ID"))
+    __table_args__ = (
+        PrimaryKeyConstraint('UID', 'LID'),
+    )
+    def __init__(self,UID,LID):
+        self.UID=UID
+        self.LID=LID
+# from implement.implement import implement_actions
 # ac=implement_actions()
-# q=ALBUM_SONG.SID==1397124008
+# q=USER_LIST.UID==15861161811
+# s=ac.query_all(USER_LIST,q)
+# for i in s:
+#     print(i.LID)
+# u=USER_LIST(15861161811,602735910000001)
+# ac.add_user_list(15861161811,602735910000001)
+# print(s.SID)
 # s=ac.query_all(ALBUM_SONG,q)[0]
 # print(s.AID)
