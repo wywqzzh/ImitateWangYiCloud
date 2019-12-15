@@ -145,6 +145,7 @@ class songController():
             LNAME = Album.NAME
             arg.update({'name': LNAME, 'id': albumId,'type':'ALBUM'})
             Lists.append(arg)
-        args.update(Lists)
+        args.update({"lists":Lists})
+        return args
 # c = songController()
 # c.fuzzyQuerySongs('张杰')

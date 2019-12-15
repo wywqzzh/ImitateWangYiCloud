@@ -146,12 +146,12 @@ def mymusic():
 
 #热门推荐
 @app.route('/playlist/')
-def mymusic():
+def playlist():
     username=request.args.get('username')
     controller=songController()
-    args=songController.recommendListAndList()
+    args=controller.recommendListAndList()
     args.update({"username":username})
     print(args)
-    return render_template('mymusic.html',username=username,args=args)
+    return render_template('playlist.html',username=username,args=args)
 if __name__ == '__main__':
     app.run()

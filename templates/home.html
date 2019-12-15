@@ -120,8 +120,9 @@
     <div class="main_box">
         <div class="box">
             <div class="box_top">
+                {% set h=url_for('playlist',username=username) %}
                 <img src="../static/imgs/main_box/box_top_bg.png">
-                <a href="#">热门推荐</a>
+                <a href="{{ h }}">热门推荐</a>
             </div>
             <div class="imgContent">
                 <div class="imgContent1 clearfix">

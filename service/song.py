@@ -80,7 +80,8 @@ class Logic_Song():
 
     #获取所有List,返回ID
     def getAllLists(self):
-        query_filter=True
+        L=['新歌榜','热歌榜','飙升榜']
+        query_filter=LIST.NAME.notin_(L)
         Lists=self.action.query_all(LIST,query_filter)
         listsIds=[]
         for l in Lists:
