@@ -54,3 +54,7 @@ label{
     color: #e81919;
     margin-top: 20px;
 }
+.bottom {
+    background: black;
+    height: 20px;
+}

@@ -14,8 +14,6 @@ from sqlalchemy import Column,CHAR,VARCHAR,SMALLINT,Boolean,func
 # for i in courses:
 #     print(type(i))
 import time
-x={}
-s='123'
-ss=3
-x.update({s:ss})
+import math
+x=int(math.pow(10,100))
 print(x)
