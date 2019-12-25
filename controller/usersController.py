@@ -54,5 +54,30 @@ class usersController():
             Lists.append(arg)
         args.update({"lists":Lists})
         return args
+    def addSongToUserList(self,sid,lid):
+        x=self.logic_song.getListSong(lid,sid)
+        print('x',x)
+        if len(x)!=0:
+            return False
+        self.logic_song.addList_Song(lid,sid)
+        return True
+
+    # def getUserListMessage(self,username):
+    #     ULits=self.logic_users.getUserListsByUsername(username)
+    #     LID=[]
+    #     LNAME=[]
+    #     for ulist in ULits:
+    #         LID.append(ulist.LID)
+    #         list=self.logic_song.getListById(ulist.LID)
+    #         LNAME.append(list.NAME)
+    #     data={
+    #         'ULID':LID,
+    #         'ULNAME':LNAME
+    #     }
+    #     return data
+
+# u=usersController()
+# print(u.giveUserListMessage('倾我一生一世念'))
+
 
 

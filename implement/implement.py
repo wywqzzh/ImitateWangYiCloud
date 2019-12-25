@@ -33,8 +33,8 @@ class implement_actions():
         conn.execute(sql)
         conn.close()
 
-    def add_list(self, ID, LNAME, URL):
-        sql = "INSERT INTO LIST(ID, NAME, URL) VALUES ('{0}','{1}','{2}')".format(ID, LNAME, URL)
+    def add_list(self, ID, LNAME, URL,type):
+        sql = "INSERT INTO LIST(ID, NAME, URL,TYPE) VALUES ('{0}','{1}','{2}',{3})".format(ID, LNAME, URL,type)
         conn = self.engine.connect()
         conn.execute(sql)
         conn.close()

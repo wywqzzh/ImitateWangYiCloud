@@ -1,8 +1,7 @@
 from Model.Base import SONG, ALBUM, LIST
 from Model.Relation import ALBUM_SONG, LIST_SONG
 from implement.implement import implement_actions
-
-
+from sqlalchemy import and_
 class Logic_Song():
     def __init__(self):
         self.action = implement_actions()
@@ -59,8 +58,8 @@ class Logic_Song():
         return songs
 
     #添加LIST
-    def addList(self,ID,LNAME,URL):
-        self.action.add_list(ID,LNAME,URL)
+    def addList(self,ID,LNAME,URL,type):
+        self.action.add_list(ID,LNAME,URL,type)
 
     #添加LIST_SONG
     def addList_Song(self,LID,SID):
@@ -81,7 +80,7 @@ class Logic_Song():
     #获取所有List,返回ID
     def getAllLists(self):
         L=['新歌榜','热歌榜','飙升榜']
-        query_filter=LIST.NAME.notin_(L)
+        query_filter=and_(LIST.NAME.notin_(L),LIST.TYPE==0)
         Lists=self.action.query_all(LIST,query_filter)
         listsIds=[]
         for l in Lists:
@@ -97,6 +96,10 @@ class Logic_Song():
         for a in Albums:
             albumsIds.append(a.ID)
         return albumsIds
+
+    def getListSong(self,lid,sid):
+        query_filter=and_(LIST_SONG.LID==lid,LIST_SONG.SID==sid)
+        return self.action.query_all(LIST_SONG,query_filter)
 # L=Logic_Song()
 #
 # lists=L.getAllLists()

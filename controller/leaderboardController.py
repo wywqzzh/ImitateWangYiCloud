@@ -25,7 +25,7 @@ class leaderboardController():
         solarId=self.mysnow.get_id()
         solarName='飙升榜'
         solarUrl='/imgs/n_blist/飙升榜.jpg'
-        self.logic_song.addList(solarId,solarName,solarUrl)
+        self.logic_song.addList(solarId,solarName,solarUrl,0)
         solarSong=args['solarArgs']['ids']
         for sid in solarSong:
             self.logic_song.addList_Song(solarId,sid)
@@ -34,7 +34,7 @@ class leaderboardController():
         newId = self.mysnow.get_id()
         newName = '新歌榜'
         newUrl = '/imgs/n_blist/新歌榜.jpg'
-        self.logic_song.addList(newId, newName, newUrl)
+        self.logic_song.addList(newId, newName, newUrl,0)
         newSong = args['newArgs']['ids']
         for sid in newSong:
             self.logic_song.addList_Song(newId, sid)
@@ -43,7 +43,7 @@ class leaderboardController():
         hotId = self.mysnow.get_id()
         hotName = '热歌榜'
         hotUrl = '/imgs/n_blist/热歌榜.jpg'
-        self.logic_song.addList(hotId, hotName, hotUrl)
+        self.logic_song.addList(hotId, hotName, hotUrl,0)
         hotSong = args['hotArgs']['ids']
         for sid in hotSong:
             self.logic_song.addList_Song(hotId, sid)

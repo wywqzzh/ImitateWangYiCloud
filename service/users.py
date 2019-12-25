@@ -27,6 +27,13 @@ class Logic_Users():
         else:
             return None
 
+    def getUserListsByUsername(self,username):
+        query_filter=USERS.NICKNAME==username
+        UID=self.action.query_all(USERS,query_filter)[0].ID
+        query_filter=USER_LIST.UID==UID
+        ULists=self.action.query_all(USER_LIST,query_filter)
+        return ULists
+
     #根据用户ID查找歌单,返回歌单ID
     def getListsByUid(self,UID):
         query_filter=USER_LIST.UID==UID

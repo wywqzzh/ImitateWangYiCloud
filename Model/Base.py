@@ -26,11 +26,14 @@ class LIST(Base):
     ID = Column(BIGINT, primary_key=True)
     NAME = Column(VARCHAR(200), nullable=False)
     URL=Column(VARCHAR(200),nullable=True)
-
-    def __init__(self, ID, NAME,URL):
+    TYPE=Column(INT)
+    STYLE=Column(VARCHAR(200))
+    def __init__(self, ID, NAME,URL,TYPE,STYLE):
         self.ID = ID
         self.NAME = NAME
         self.URL=URL
+        self.TYPE=TYPE
+        self.STYLE=STYLE
 
 
 class ALBUM(Base):

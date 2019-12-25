@@ -53,9 +53,15 @@ def AlbumAndList(id, type):
     ID=request.args.get('id');
     if id==0:
         id=ID
+    isUser=request.args.get('isUser')
     args = controller.getAlbumAndListMessageByAid(id, type)
     username = request.args.get('username')
-    return render_template("AlbumAndList.html", username=username, id=id, type=type, args=args);
+    if isUser=='1':
+        args.update({'isUser':1})
+    else:
+        args.update({"isUser":0})
+    args.update({"username":username})
+    return render_template("AlbumAndList.html", username=username, id=id, type=type, args=args)
 
 
 @app.route("/test/")
@@ -77,7 +83,6 @@ def loginInterpretation():
     if ID == None or not flag:
         error = '用户名或密码错误'
         return render_template("login.html", error=error)
-    print(username)
     URL = url_for('hello_world') + '?username=' + username
     return redirect(URL)
 
@@ -137,10 +142,11 @@ def BehindMethod():
 @app.route('/mymusic/')
 def mymusic():
     username=request.args.get('username')
+    if username=='':
+        return redirect('/login/')
     controller=usersController()
     args=controller.giveUserListMessage(username)
     args.update({"username":username})
-    print(args)
     return render_template('mymusic.html',username=username,args=args)
 
 
@@ -151,7 +157,44 @@ def playlist():
     controller=songController()
     args=controller.recommendListAndList()
     args.update({"username":username})
-    print(args)
     return render_template('playlist.html',username=username,args=args)
+
+@app.route('/selectList/',methods=['post','get'])
+def selectList():
+    if request.method=='GET':
+        pass
+    id=request.args.get('id')
+    return render_template('selectList.html',id=id)
+
+
+@app.route('/getMylist/',methods=['post','get'])
+def getMylist():
+    username=request.args.get('username')
+    if username==None or username==''or len(username)==0:
+        data={
+            'suc':0
+        }
+        return data
+    else:
+        userscontroller=usersController()
+        data=userscontroller.giveUserListMessage(username)
+        data.update({'suc':1})
+        return data
+@app.route('/addMusic/',methods=['post','get'])
+def addMusic():
+    username=request.args.get('username')
+    sid=request.args.get('sid')
+    lid=request.args.get('lid')
+    userscontroller=usersController()
+    flag=userscontroller.addSongToUserList(sid,lid)
+    if flag:
+        data={
+            'flag':1
+        }
+    else:
+        data = {
+            'flag': 0
+        }
+    return data
 if __name__ == '__main__':
     app.run()
