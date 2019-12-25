@@ -196,5 +196,15 @@ def addMusic():
             'flag': 0
         }
     return data
+@app.route('/deleteMusic/',methods=['post','get'])
+def deleteMusic():
+    sid = request.args.get('sid')
+    lid = request.args.get('lid')
+    userscontroller = usersController()
+    userscontroller.deleteSongList(sid,lid)
+    data={
+        'flag':1
+    }
+    return data
 if __name__ == '__main__':
     app.run()

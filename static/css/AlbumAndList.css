@@ -268,12 +268,21 @@ tbody tr .number {
     background: url("../imgs/AlumAndList/Favorite1.png") no-repeat;
     background-size: 30px 30px;
 }
+.button4 {
+    width: 30px;
+    height: 30px;
+    background: url("../imgs/AlumAndList/delete.png") no-repeat;
+    background-size: 30px 30px;
+}
 
 .button3:hover {
     background: url("../imgs/AlumAndList/Favorite2.png") no-repeat;
     background-size: 30px 30px;
 }
-
+.button4:hover {
+    background: url("../imgs/AlumAndList/delete.png") no-repeat;
+    background-size: 30px 30px;
+}
 tbody tr:nth-of-type(even) {
     background: #f7f7f7;
 }

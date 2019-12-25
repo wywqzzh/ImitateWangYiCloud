@@ -2,6 +2,8 @@ from Model.Base import SONG, ALBUM, LIST
 from Model.Relation import ALBUM_SONG, LIST_SONG
 from implement.implement import implement_actions
 from sqlalchemy import and_
+
+
 class Logic_Song():
     def __init__(self):
         self.action = implement_actions()
@@ -35,19 +37,21 @@ class Logic_Song():
     def getListById(self, ID):
         query_filter = LIST.ID == ID
         result = self.action.query_all(LIST, query_filter)
-        if len(result)>=1:
+        if len(result) >= 1:
             return result[0]
         else:
             return None
-    def getListByNAME(self,NAME):
-        query_filter=LIST.NAME==NAME
-        result=self.action.query_all(LIST,query_filter)
+
+    def getListByNAME(self, NAME):
+        query_filter = LIST.NAME == NAME
+        result = self.action.query_all(LIST, query_filter)
         return result
+
     # 模糊查询根据歌名
     def fuzzyQuerySongsBySname(self, sname):
-        sname='%'+sname+'%'
-        query_filter=SONG.SNAME.ilike(sname)
-        songs=self.action.query_all(SONG,query_filter)
+        sname = '%' + sname + '%'
+        query_filter = SONG.SNAME.ilike(sname)
+        songs = self.action.query_all(SONG, query_filter)
         return songs
 
     # 模糊查询根据歌名
@@ -57,49 +61,51 @@ class Logic_Song():
         songs = self.action.query_all(SONG, query_filter)
         return songs
 
-    #添加LIST
-    def addList(self,ID,LNAME,URL,type):
-        self.action.add_list(ID,LNAME,URL,type)
+    # 添加LIST
+    def addList(self, ID, LNAME, URL, type):
+        self.action.add_list(ID, LNAME, URL, type)
 
-    #添加LIST_SONG
-    def addList_Song(self,LID,SID):
-        self.action.add_list_song(LID,SID)
+    # 添加LIST_SONG
+    def addList_Song(self, LID, SID):
+        self.action.add_list_song(LID, SID)
 
+    # 删除LIST_SONG
+    def delete_ListSongByLID(self, LID):
+        query_filter = LIST_SONG.LID == LID
+        self.action.delete_by_filter(LIST_SONG, query_filter)
 
-    #删除LIST_SONG
-    def delete_ListSongByLID(self,LID):
-        query_filter =LIST_SONG.LID==LID
-        self.action.delete_by_filter(LIST_SONG,query_filter)
+    def delete_ListSongByLIDAndSID(self, LID,SID):
+        query_filter = and_(LIST_SONG.LID == LID,LIST_SONG.SID==SID)
+        self.action.delete_by_filter(LIST_SONG, query_filter)
 
-    #删除LIST
-    def delete_list(self,ID):
-        query_filter=LIST.ID==ID
-        self.action.delete_by_filter(LIST,query_filter)
+    # 删除LIST
+    def delete_list(self, ID):
+        query_filter = LIST.ID == ID
+        self.action.delete_by_filter(LIST, query_filter)
 
-
-    #获取所有List,返回ID
+    # 获取所有List,返回ID
     def getAllLists(self):
-        L=['新歌榜','热歌榜','飙升榜']
-        query_filter=and_(LIST.NAME.notin_(L),LIST.TYPE==0)
-        Lists=self.action.query_all(LIST,query_filter)
-        listsIds=[]
+        L = ['新歌榜', '热歌榜', '飙升榜']
+        query_filter = and_(LIST.NAME.notin_(L), LIST.TYPE == 0)
+        Lists = self.action.query_all(LIST, query_filter)
+        listsIds = []
         for l in Lists:
             listsIds.append(l.ID)
         return listsIds
 
-    #获取所有Album
+    # 获取所有Album
 
     def getAllAlbums(self):
         query_filter = True
-        Albums=self.action.query_all(ALBUM,query_filter)
-        albumsIds=[]
+        Albums = self.action.query_all(ALBUM, query_filter)
+        albumsIds = []
         for a in Albums:
             albumsIds.append(a.ID)
         return albumsIds
 
-    def getListSong(self,lid,sid):
-        query_filter=and_(LIST_SONG.LID==lid,LIST_SONG.SID==sid)
-        return self.action.query_all(LIST_SONG,query_filter)
+    def getListSong(self, lid, sid):
+        query_filter = and_(LIST_SONG.LID == lid, LIST_SONG.SID == sid)
+        return self.action.query_all(LIST_SONG, query_filter)
 # L=Logic_Song()
 #
 # lists=L.getAllLists()

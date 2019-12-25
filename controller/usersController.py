@@ -56,12 +56,13 @@ class usersController():
         return args
     def addSongToUserList(self,sid,lid):
         x=self.logic_song.getListSong(lid,sid)
-        print('x',x)
         if len(x)!=0:
             return False
         self.logic_song.addList_Song(lid,sid)
         return True
 
+    def deleteSongList(self,sid,lid):
+        self.logic_song.delete_ListSongByLIDAndSID(lid,sid)
     # def getUserListMessage(self,username):
     #     ULits=self.logic_users.getUserListsByUsername(username)
     #     LID=[]

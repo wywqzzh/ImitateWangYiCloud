@@ -61,6 +61,7 @@
                 </thead>
                 <tbody>
                 <script>
+                    var args ={{ args|tojson }};
                     var tbody = document.getElementsByTagName('tbody')[0];
                     var add = function (number, title, time, name, index, sid) {
                         var tr = document.createElement("tr");
@@ -134,8 +135,8 @@
                         mins = ("0" + mins).slice(-2);
                         return (displayHours ? hours + ':' : '') + mins + seperator + secs;
                     }
-                    var args = {{ args|tojson }}
-                        document.getElementsByClassName("number_songLits")[0].innerHTML = args['snames'].length + "首歌";
+
+                    document.getElementsByClassName("number_songLits")[0].innerHTML = args['snames'].length + "首歌";
                     var names = args['snames'];
                     var aurls = args['saurls'];
 
@@ -157,13 +158,17 @@
             </table>
             <script>
                 var $trs = $('tbody').find('tr');
+                var args = {{ args|tojson }};
                 for (var i = 0; i < $trs.length; i++) {
                     var x = $trs.get(i).getElementsByClassName("td_third")[0].getElementsByTagName("a")[0];
                     {#console.log(x);#}
                     x.onmouseover = function () {
                         var time = this.innerHTML;
                         this.innerHTML = null;
-                        this.className = 'button3';
+                        if (args['isUser'] == '0')
+                            this.className = 'button3';
+                        else
+                            this.className = 'button4';
                         this.onmouseout = function () {
                             this.innerHTML = time;
                             this.className = '';
@@ -171,16 +176,15 @@
                     }
                     x.onclick = function () {
                         this.innerHTML = null;
-                        this.className = 'button3';
+                        if (args['isUser'] == '0')
+                            this.className = 'button3';
+                        else
+                            this.className = 'button4';
                     }
                 }
 
             </script>
         </div>
-        <script>
-            var args ={{ args|tojson }};
-            console.log(args);
-        </script>
         {% if args['isUser']==0 %}
             <div id="background" class="back">
                 <div id="div1" class="content">
@@ -196,8 +200,8 @@
                 for (var i = 0; i < $trs.length; i++) {
                     var x = $trs.get(i).getElementsByClassName("td_third")[0].getElementsByTagName("a")[0];
                     x.onclick = function () {
-                        var p=this.parentNode.parentNode.parentNode;
-                        var h=p.firstChild.firstChild.firstChild.innerHTML;
+                        var p = this.parentNode.parentNode.parentNode;
+                        var h = p.firstChild.firstChild.firstChild.innerHTML;
                         $.ajax({
                             url: "{{ url_for('getMylist',username=username) }}",
                             type: "POST",
@@ -206,9 +210,8 @@
                                 if (data['suc'] == 0) {
                                     window.location.href = "{{ url_for('login') }}";
                                 } else {
-                                    console.log(data);
                                     var TYPE = document.getElementsByClassName('type')[0];
-                                    TYPE.id=h-1;
+                                    TYPE.id = h - 1;
                                     for (var j = 0; j < data['lists'].length; j++) {
                                         var flag = 0;
                                         var $options = $('.type').find('option');
@@ -236,40 +239,50 @@
                 }
                 function submitForm() {
                     var z = $('.type option:selected').val();
-                     var TYPE = document.getElementsByClassName('type')[0];
-                     var sid=args['sids'][TYPE.id];
-                    console.log('hehe',sid);
-                    console.log('haha',z);
-                    console.log('haha',args['username']);
+                    var TYPE = document.getElementsByClassName('type')[0];
+                    var sid = args['sids'][TYPE.id];
                     div.style.display = "none";
-                    var h="/addMusic/?sid=" +sid+'&lid='+z+'&username='+args['username'];
-                    console.log(h);
+                    var h = "/addMusic/?sid=" + sid + '&lid=' + z + '&username=' + args['username'];
                     $.ajax({
-                        url:h,
+                        url: h,
                         type: "POST",
                         dataType: "json",
 
                         success: function (data) {
-                            if(data['flag']==0){
+                            if (data['flag'] == 0) {
                                 alert('歌曲已存在,添加失败');
-                            }else {
+                            } else {
                                 alert('添加成功');
                             }
+                            $(".type").val('0');
                         }
-
                     })
-                    $(".type").find("option[value='0']").attr("selected",true);
-                }
 
-                /*close.onclick = function close() {
-                    div.style.display = "none";
                 }
+            </script>
+        {% else %}
+            <script>
+                var args ={{ args|tojson }};
+                var $trs = $('tbody').find('tr');
+                var div = document.getElementById('background');
+                for (var i = 0; i < $trs.length; i++) {
+                    var x = $trs.get(i).getElementsByClassName("td_third")[0].getElementsByTagName("a")[0];
+                    x.onclick = function () {
+                        var p = this.parentNode.parentNode.parentNode;
+                        var index = p.firstChild.firstChild.firstChild.innerHTML - 1;
+                        var sid = args['sids'][index];
+                        var h = "/deleteMusic/?sid=" + sid + '&lid=' + args['id'];
+                        $.ajax({
+                            url: h,
+                            type: "POST",
+                            dataType: "json",
+                            success: function (data) {
+                                location.reload();
+                            }
 
-                window.onclick = function close(e) {
-                    if (e.target == div) {
-                        div.style.display = "none";
+                        })
                     }
-                }*/
+                }
             </script>
         {% endif %}
     </div>

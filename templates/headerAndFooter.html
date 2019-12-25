@@ -21,8 +21,8 @@
             <a href="{{ url_for('hello_world') }}" style="width: 74px"><li style="width: 74px">首页</li></a>
             {% set h=url_for('mymusic',username=username) %}
             <a href="{{h}}" style="width: 148px"><li style="width: 148px">我的音乐</li></a>
-            <a href="#" style="width: 111px"><li style="width: 111px">排行榜</li></a>
-            <a href="#" style="width: 74px"><li style="width: 74px">歌手</li></a>
+            <a href="#leader" style="width: 111px"><li style="width: 111px">排行榜</li></a>
+{#            <a href="#" style="width: 74px"><li style="width: 74px">歌手</li></a>#}
             <a href="#" style="width: 185px"><li style="width: 185px">下载客户端</li></a>
         </ul>
         <div class="search">
@@ -35,7 +35,7 @@
             {% if username=='' %}
                 <a href="{{ url_for('login') }}">登录</a>
             {% else %}
-                <a href="#">{{ username }}</a>
+                <a href="{{ url_for('hello_world') }}">{{ username }}</a>
             {% endif %}
         </div>
     </div>

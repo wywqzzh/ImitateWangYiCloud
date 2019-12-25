@@ -45,7 +45,7 @@
                 <tbody>
                 <script>
                     var tbody = document.getElementsByTagName('tbody')[0];
-                    var add = function (number, title, time, name,index,id) {
+                    var add = function (number, title, time, name, index, id) {
                         var tr = document.createElement("tr");
                         {#$('<tr></tr>').append('<td class="d1"><div class="td_first"><span class="number">'+number+'<span>'+'</div></td>')#}
                         {#    .append('<td></td>').append('<td></td>').append('<td></td>').appendTo(tbody)#}
@@ -72,9 +72,9 @@
                         numSpan.innerHTML = number;
                         var a = document.createElement('a');
                         a.className += 'button';
-                        a.target='_blank';
-                        var f='{{ url_for('playerDeal',id=1,Type=type) }}'+'?ID='+id+"&index="+'0';
-                        a.href=f;
+                        a.target = '_blank';
+                        var f = '{{ url_for('playerDeal',id=1,Type=type) }}' + '?ID=' + id + "&index=" + '0';
+                        a.href = f;
                         {#a.href = '{{ url_for('playerDeal',id=id,Type=type,index=index) }}';#}
                         var p2 = document.createElement('p');
                         p2.innerHTML = title;
@@ -120,9 +120,10 @@
                     }
                     var args = {{ args|tojson }}
                         document.getElementsByClassName("number_songLits")[0].innerHTML = args['snames'].length;
+                    console.log('args', args);
                     var names = args['snames'];
                     var aurls = args['saurls'];
-                    var sids=args['sids'];
+                    var sids = args['sids'];
 
                     var vocalists = args['svocalists'];
                     for (var i = 0; i < names.length; i++) {
@@ -130,36 +131,13 @@
                         var audio = document.createElement("audio");
                         audio.src = f;
                         audio.id = i + 1;
-                        add(i + 1, names[i], "00:00", vocalists[i],i,sids[i]);
+                        add(i + 1, names[i], "00:00", vocalists[i], i, sids[i]);
                         audio.oncanplay = function () {
                             var p = document.getElementById(this.id)
                             p.innerHTML = formatTime(this.duration);
                         }
                     }
                 </script>
-                {#                <tr>#}
-                {#                    <td class="d1">#}
-                {#                        <div class="td_first">#}
-                {#                            <span class="number">1</span>#}
-                {#                            <a href="#" class="button"></a>#}
-                {#                        </div>#}
-                {#                    </td>#}
-                {#                    <td class="d2">#}
-                {#                        <div class="td_second">#}
-                {#                            <p>哈哈哈哈</p>#}
-                {#                        </div>#}
-                {#                    </td>#}
-                {#                    <td class="d3">#}
-                {#                        <div class="td_third">#}
-                {#                            <a href="#" class="button3"></a>#}
-                {#                        </div>#}
-                {#                    </td>#}
-                {#                    <td class="d4">#}
-                {#                        <div class="td_fouth">#}
-                {#                            <p>呵呵呵</p>#}
-                {#                        </div>#}
-                {#                    </td>#}
-                {#                </tr>#}
                 </tbody>
             </table>
             <script>
@@ -184,5 +162,95 @@
 
             </script>
         </div>
+        <div id="background" class="back">
+            <div id="div1" class="content">
+                <a style="color: black;font-size: 16px">请选择歌单</a>
+                <select name="type" class="type" id="type" onchange="submitForm();" style="width: 200px;">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+        </div>
+        <script>
+            var $trs = $('tbody').find('tr');
+            var div = document.getElementById('background');
+            for (var i = 0; i < $trs.length; i++) {
+                var x = $trs.get(i).getElementsByClassName("td_third")[0].getElementsByTagName("a")[0];
+                x.onclick = function () {
+                    var p = this.parentNode.parentNode.parentNode;
+                    var h = p.firstChild.firstChild.firstChild.innerHTML;
+                    $.ajax({
+                        url: "{{ url_for('getMylist',username=username) }}",
+                        type: "POST",
+                        dataType: "json",
+                        success: function (data) {
+                            if (data['suc'] == 0) {
+                                window.location.href = "{{ url_for('login') }}";
+                            } else {
+                                console.log(data);
+                                var TYPE = document.getElementsByClassName('type')[0];
+                                TYPE.id = h - 1;
+                                for (var j = 0; j < data['lists'].length; j++) {
+                                    var flag = 0;
+                                    var $options = $('.type').find('option');
+                                    for (var k = 0; k < $options.length; k++) {
+                                        if ($options.get(k).value == data['lists'][j]['id']) {
+                                            flag = 1;
+                                        }
+                                    }
+                                    if (flag == 0) {
+                                        var option = document.createElement('option');
+                                        option.value = data['lists'][j]['id'];
+                                        option.innerHTML = data['lists'][j]['name'];
+                                        TYPE.appendChild(option);
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                    })
+
+                    div.style.display = "block";
+                }
+            }
+
+            function submitForm() {
+                var z = $('.type option:selected').val();
+                var TYPE = document.getElementsByClassName('type')[0];
+                var sid = args['sids'][TYPE.id];
+                console.log('hehe', sid);
+                console.log('haha', z);
+                console.log('haha', args['username']);
+                div.style.display = "none";
+                var h = "/addMusic/?sid=" + sid + '&lid=' + z + '&username=' + args['username'];
+                console.log(h);
+                $.ajax({
+                    url: h,
+                    type: "POST",
+                    dataType: "json",
+
+                    success: function (data) {
+                        if (data['flag'] == 0) {
+                            alert('歌曲已存在,添加失败');
+                        } else {
+                            alert('添加成功');
+                        }
+                        $(".type").val('0');
+                    }
+
+                })
+            }
+
+            /*close.onclick = function close() {
+                div.style.display = "none";
+            }
+
+            window.onclick = function close(e) {
+                if (e.target == div) {
+                    div.style.display = "none";
+                }
+            }*/
+        </script>
     </div>
 {% endblock %}
