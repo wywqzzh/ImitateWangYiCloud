@@ -1,7 +1,7 @@
 from Model.Base import USERS
 from Model.Relation import USER_LIST
 from implement.implement import implement_actions
-from sqlalchemy import text
+from sqlalchemy import text,and_
 
 
 class Logic_Users():
@@ -42,3 +42,34 @@ class Logic_Users():
         for i in user_lists:
             listsIds.append(i.LID)
         return listsIds
+
+    def getAllUser(self):
+        query_filter=True
+        Users=self.action.query_all(USERS,query_filter)
+        return Users
+
+    def changeAdminOruser(self,username,Utype):
+        if Utype==0:
+            data={"UTYPE":1}
+        else:
+            data = {"UTYPE": 0}
+        query_filter=USERS.NICKNAME==username
+        self.action.update_by_filter(USERS,data,query_filter)
+
+    def changeProhibit(self, username, Prohibit):
+        if Prohibit == 0:
+            data = {"Prohibit": 1}
+        else:
+            data = {"Prohibit": 0}
+        query_filter = USERS.NICKNAME == username
+        self.action.update_by_filter(USERS, data, query_filter)
+
+    def deleteUserListTable(self,username,lid):
+        query_filter = USERS.NICKNAME == username
+        UID = self.action.query_all(USERS, query_filter)[0].ID
+        query_filter =and_(USER_LIST.UID == UID,USER_LIST.LID==lid)
+        self.action.delete_by_filter(USER_LIST,query_filter)
+
+    def deleteUser(self,username):
+        query_filter =USERS.NICKNAME==username
+        self.action.delete_by_filter(USERS,query_filter)

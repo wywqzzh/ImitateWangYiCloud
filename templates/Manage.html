@@ -1,0 +1,147 @@
+{% extends 'headerAndFooter.html' %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/Manage.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='imgs/logo.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='imgs/logo.ico') }}" type="image/x-icon"/>
+    <script type="text/javascript" src="{{ url_for('static',filename="js/jquery-3.4.1.min.js") }}"></script>
+{% endblock %}
+
+
+{% block title %}
+    网易云音乐
+{% endblock %}
+{% block banner %}
+    <div class="main_box">
+        <div class="list_box">
+            <div class="list_title clearfix">
+                <span class="num_songLits">
+                    <span class="key">用户管理</span>
+                </span>
+            </div>
+            <table class="list_table">
+                <thead class="thead">
+                <tr>
+                    <th class="w2">
+                        <div class="wp">用户名</div>
+                    </th>
+                    <th class="w2">
+                        <div class="wp">管理员设置</div>
+                    </th>
+                    <th class="w2">
+                        <div class="wp">账号冻结</div>
+                    </th>
+                    <th class="w4">
+                        <div class="wp">删除用户</div>
+                        {#                        <span id="hehe"></span>#}
+                    </th>
+                    {% set index=0 %}
+                </tr>
+                </thead>
+                <tbody>
+                <script>
+                    var tbody = document.getElementsByTagName('tbody')[0];
+                    var add = function (username, Utype, Prohibit) {
+                        var tr = document.createElement("tr");
+                        var td1 = document.createElement("td");
+                        td1.className += 'd2';
+                        var td2 = document.createElement("td");
+                        td2.className += 'd2';
+                        var td3 = document.createElement("td");
+                        td3.className += 'd2';
+                        var td4 = document.createElement("td");
+                        td4.className += 'd2';
+
+
+                        var div1 = document.createElement('div');
+                        div1.className += 'td_second';
+                        var div2 = document.createElement('div');
+                        div2.className += 'td_second';
+                        var div3 = document.createElement('div');
+                        div3.className += 'td_second';
+                        var div4 = document.createElement('div');
+                        div4.className += 'td_second';
+
+                        var p = document.createElement('p');
+                        p.innerHTML = username;
+                        div1.appendChild(p);
+
+                        var a2 = document.createElement('a');
+                        if (Utype == 0) {
+                            a2.innerHTML = '设为管理员'
+                        } else {
+                            a2.innerHTML = '设为普通用户'
+                        }
+                        a2.onclick = function () {
+                            $.ajax({
+                                url: {{ url_for('setAdminOrUser') }},
+                                type: "POST",
+                                dataType: "json",
+                                data: {"Utype": Utype, "username": username},
+                                success: function (data) {
+                                    location.reload();
+                                }
+
+                            })
+                        }
+                        div2.appendChild(a2);
+
+                        var a3 = document.createElement('a');
+                        if (Prohibit == 0) {
+
+                            a3.innerHTML = '冻结'
+                        } else {
+                            a3.innerHTML = '解冻'
+                        }
+                        a3.onclick = function () {
+                            $.ajax({
+                                url: {{ url_for('setProhibit') }},
+                                type: "POST",
+                                dataType: "json",
+                                data: {"Prohibit": Prohibit, "username": username},
+                                success: function (data) {
+                                    location.reload();
+                                }
+                            })
+                        }
+                        div3.appendChild(a3);
+
+                        var a4 = document.createElement('a');
+                        a4.innerHTML = '删除该账户';
+                        div4.appendChild(a4);
+                        a4.onclick = function () {
+                            $.ajax({
+                                url: {{ url_for('deleteUser') }},
+                                type: "POST",
+                                dataType: "json",
+                                data: {"username": username},
+                                success: function (data) {
+                                    location.reload();
+                                }
+                            })
+                        }
+
+                        td1.appendChild(div1);
+                        td2.appendChild(div2);
+                        td3.appendChild(div3);
+                        td4.appendChild(div4);
+                        tr.appendChild(td1);
+                        tr.appendChild(td2);
+                        tr.appendChild(td3);
+                        tr.appendChild(td4);
+                        tbody.appendChild(tr);
+                    }
+                    var args ={{ args|tojson }};
+                    for (var i = 0; i < args['Usernames'].length; i++) {
+                        add(args['Usernames'][i], args['Utypes'][i], args['Uprohibits'][i])
+                    }
+                </script>
+                </tbody>
+            </table>
+            <script>
+
+            </script>
+        </div>
+    </div>
+{% endblock %}

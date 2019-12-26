@@ -13,29 +13,31 @@
     <div class="message">
         <form action="/registerInterpretation" method="post" id="form">
             <div class="username"><label>用&nbsp;户&nbsp;名：</label><input type="text" name="username"
-                                                                        style="height: 23px;" required><br></div>
+                                                                        style="height: 23px;width: 170px;" required></div>
             <div class="nickname"><label>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label><input type="text"
                                                                                                name="nickname"
-                                                                                               style="height: 23px;"
+                                                                                               style="height: 23px;width: 170px;"
                                                                                                required
-                                                                                               maxlength="30px"><br>
+                                                                                               maxlength="30">
             </div>
             <div class="password"><label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</label><input type="password"
                                                                                                name="password"
-                                                                                               style="height: 23px;"
+                                                                                               style="height: 23px;width: 170px;"
                                                                                                required minlength="8"
                                                                                                maxlength="20"
                                                                                                id="password">
             </div>
-            <div class="password"><label>重复密码:</label><input type="password" name="repeatpassword" style="height: 23px;"
+            <div class="password"><label>重复密码:</label><input type="password" name="repeatpassword" style="height: 23px;width: 170px;"
                                                              equalTo="#password">
             </div>
             <div class="nickname"><label>密保问题:</label><input type="text" name="problem"
-                                                             style="height: 23px;" required maxlength="50"><br></div>
+                                                             style="height: 23px;width: 170px;" required maxlength="50"></div>
             <div class="nickname"><label>密保答案：</label><input type="text" name="answer"
-                                                             style="height: 23px;" required maxlength="50"><br></div>
+                                                             style="height: 23px;width: 170px;" required maxlength="50"></div>
             {% if error=='用户名已存在' %}
                 <script>alert('用户名已存在')</script>
+            {% elif error=='该手机号已注册' %}
+                <script>alert('该手机号已注册')</script>
             {% endif %}
             <div class="register"><input type="submit" value="注册" class="submit"></div>
         </form>

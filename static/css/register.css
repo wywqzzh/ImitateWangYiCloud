@@ -58,9 +58,8 @@ em{
     color: #e81919;
 }
 .error{
-    display: block;
+    /*display: block;*/
     font-size:10px ;
     color: #e81919;
-    margin-top: 50px;
-    margin: 50px auto auto auto;
+    /*margin: 50px auto auto auto;*/
 }

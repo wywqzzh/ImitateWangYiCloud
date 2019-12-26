@@ -93,10 +93,26 @@ class Logic_Song():
             listsIds.append(l.ID)
         return listsIds
 
+    def getListsByStyle(self,style):
+        L = ['新歌榜', '热歌榜', '飙升榜']
+        query_filter = and_(LIST.NAME.notin_(L), LIST.TYPE == 0,LIST.STYLE==style)
+        Lists = self.action.query_all(LIST, query_filter)
+        listsIds = []
+        for l in Lists:
+            listsIds.append(l.ID)
+        return listsIds
     # 获取所有Album
 
     def getAllAlbums(self):
         query_filter = True
+        Albums = self.action.query_all(ALBUM, query_filter)
+        albumsIds = []
+        for a in Albums:
+            albumsIds.append(a.ID)
+        return albumsIds
+
+    def getAlbumsByStyle(self,style):
+        query_filter = ALBUM.STYLE==style
         Albums = self.action.query_all(ALBUM, query_filter)
         albumsIds = []
         for a in Albums:

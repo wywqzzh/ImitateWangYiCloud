@@ -41,10 +41,11 @@ class ALBUM(Base):
     ID = Column(BIGINT, primary_key=True)
     NAME = Column(VARCHAR(200), nullable=False)
     URL = Column(VARCHAR(200), nullable=True)
-
-    def __init__(self, ID, NAME, URL):
+    STYLE=Column(VARCHAR(200))
+    def __init__(self, ID, NAME, URL,STYLE):
         self.ID = ID
         self.NAME = NAME
+        self.STYLE=STYLE
         self.URL = URL
 class VOCALIST(Base):
     __tablename__='VOCALIST'
@@ -62,12 +63,16 @@ class USERS(Base):
     PASSWORD=Column(VARCHAR(200),nullable=False)
     PROBLEM=Column(VARCHAR(200),nullable=False)
     ANSWER=Column(VARCHAR(200),nullable=False)
-    def __init__(self,ID,NICKNAME,PASSWORD,PROBLEM,ANSWER):
+    UTYPE=Column(INT)
+    Prohibit=Column(INT)
+    def __init__(self,ID,NICKNAME,PASSWORD,PROBLEM,ANSWER,UTYPE,Prohibit):
         self.ID=ID
         self.NICKNAME=NICKNAME
         self.PASSWORD=PASSWORD
         self.PROBLEM=PROBLEM
         self.ANSWER=ANSWER
+        self.UTYPE=UTYPE
+        self.Prohibit=Prohibit
 # ac=implement_actions()
 # q=USERS.ID=='dasd'
 # s=ac.query_all(USERS,q)

@@ -12,9 +12,8 @@ class usersController():
         self.regex=re.compile('^\d{11}$')
 
 
-    #判断用户名是否存在
+    #判断手机号是否存在
     def isExist(self,ID):
-        print(ID)
         if self.regex.search(ID)==None:
             return False
         user=self.logic_users.getUserByID(ID)
@@ -22,24 +21,32 @@ class usersController():
             return True
         return False
 
+    def usernameIsExist(self,usernamne):
+        userid=self.logic_users.getUidByUserName(usernamne)
+        if userid!=None:
+            return True
+        return False
+
 
     #判断用户名密码是否匹配
     def loginSuccess(self,ID,PASSWORD):
+        if ID==None:
+            return False, '',0,
         if self.regex.search(ID)==None:
-            return False,''
+            return False,'',0,0
         user=self.logic_users.getUserByID(ID)
         if len(user)==0:
-            return False,''
+            return False,'',0,0
         user=user[0]
         if user.PASSWORD==PASSWORD:
-            return True,user.NICKNAME
-        return False,''
+            return True,user.NICKNAME,user.UTYPE,user.Prohibit
+        return False,'',0,0
 
     #添加用户
     def addUser(self,ID,NIKENAME,PASSWORD,PROBLEM,ANSWER):
         self.logic_users.addUser(ID,NIKENAME,PASSWORD,PROBLEM,ANSWER)
 
-    #
+    #根据用户名获取用户歌单信息
     def giveUserListMessage(self,userName):
         UID=self.logic_users.getUidByUserName(userName)
         listsIds=self.logic_users.getListsByUid(UID)
@@ -54,6 +61,8 @@ class usersController():
             Lists.append(arg)
         args.update({"lists":Lists})
         return args
+
+    #向歌单中添加歌曲
     def addSongToUserList(self,sid,lid):
         x=self.logic_song.getListSong(lid,sid)
         if len(x)!=0:
@@ -61,8 +70,45 @@ class usersController():
         self.logic_song.addList_Song(lid,sid)
         return True
 
+    #获取全部用户信息
+    def getAllUserMessage(self):
+        Users=self.logic_users.getAllUser()
+        Usernames=[]
+        Uids=[]
+        Utypes=[]
+        Uprohibits=[]
+        for user in Users:
+            Usernames.append(user.NICKNAME)
+            Uids.append(user.ID)
+            Utypes.append(user.UTYPE)
+            Uprohibits.append(user.Prohibit)
+        args={
+            'Usernames':Usernames,
+            'Uids':Uids,
+            'Utypes':Utypes,
+            'Uprohibits':Uprohibits
+        }
+        return args
+
+    #删除歌单歌曲
     def deleteSongList(self,sid,lid):
         self.logic_song.delete_ListSongByLIDAndSID(lid,sid)
+
+
+    def ChangeAdminOrUser(self,username,Utype):
+        self.logic_users.changeAdminOruser(username,Utype)
+
+    def ChangeProhibit(self,username,Prohibit):
+        self.logic_users.changeProhibit(username,Prohibit)
+
+
+    def deleteUser(self,username):
+        ULists=self.logic_users.getUserListsByUsername(username)
+        Lids=[U.LID for U in ULists]
+        for lid in Lids:
+            self.logic_song.delete_list(lid)
+            self.logic_users.deleteUserListTable(username,lid)
+        self.logic_users.deleteUser(username)
     # def getUserListMessage(self,username):
     #     ULits=self.logic_users.getUserListsByUsername(username)
     #     LID=[]

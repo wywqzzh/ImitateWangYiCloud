@@ -12,13 +12,20 @@
     </div>
     <div class="message">
         <form action="/loginInterpretation" method="post">
-            <div class="username"><label>用户名：</label><input type="text" name="username" style="height: 23px;"><br></div>
-            <div class="password"><label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label><input type="password" name="password" style="height: 23px;"></div>
-            <em id="username-error" class="error">{{ error }}</em>
+            <div class="username"><label>手机号：</label><input type="text" name="username" style="height: 23px;"><br></div>
+            <div class="password"><label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label><input type="password" name="password"
+                                                                                   style="height: 23px;"></div>
+            {% if error!='' %}
+                <em id="username-error" class="error"><a href="#" style="text-decoration: none;color: #969696;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ error }}</a></em>
+            {% else  %}
+            <em id="username-error" class="error"><a href="#" style="text-decoration: none;color: #969696;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忘记密码？</a></em>
+            {% endif %}
             <div class="login"><input type="submit" value="登陆" class="submit"></div>
             <div class="bottom"></div>
         </form>
-
+        <form action="{{ url_for('register') }}" method="post">
+            <div class="login"><input type="submit" value="注册" class="submit"></div>
+        </form>
     </div>
 </div>
 </body>

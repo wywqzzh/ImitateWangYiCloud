@@ -27,7 +27,7 @@ class implement_actions():
         return obj
 
     def add_user(self, ID, NIKENAME, PASSWORD, PROBLEM, ANSWER):
-        sql = "INSERT INTO USERS(ID, NICKNAME, PASSWORD, PROBLEM, ANSWER) VALUES ('{0}','{1}','{2}','{3}','{4}')".format(
+        sql = "INSERT INTO USERS(ID, NICKNAME, PASSWORD, PROBLEM, ANSWER,UTYPE,Prohibit ) VALUES ('{0}','{1}','{2}','{3}','{4}',0,0)".format(
             ID, NIKENAME, PASSWORD, PROBLEM, ANSWER)
         conn = self.engine.connect()
         conn.execute(sql)

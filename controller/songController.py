@@ -128,10 +128,14 @@ class songController():
         }
         return args
     #推荐内容信息
-    def recommendListAndList(self):
-        listsIds=self.logic_song.getAllLists()
-        albumsIds=self.logic_song.getAllAlbums()
-        args={"name":'全部'}
+    def recommendListAndList(self,style):
+        if style=='全部':
+            listsIds=self.logic_song.getAllLists()
+            albumsIds=self.logic_song.getAllAlbums()
+        else:
+            listsIds = self.logic_song.getListsByStyle(style)
+            albumsIds = self.logic_song.getAlbumsByStyle(style)
+        args={"name":style}
         Lists=[]
         for i, listId in enumerate(listsIds):
             arg = {}

@@ -6,9 +6,6 @@
     <link rel="shortcut icon" href="../static/imgs/logo.ico" type="image/x-icon"/>
     <script>
         window.onload = function () {
-            {#var imgs = document.getElementsByTagName('img');#}
-            {#var out = document.getElementById('imgList');#}
-            {#out.style.width = 1100 * imgs.length + "px";#}
             var nav = document.getElementById('nav');
             var imgCarousel = document.getElementById('imgCarousel');
             nav.style.left = (imgCarousel.offsetWidth - nav.offsetWidth) / 2 + "px";
@@ -29,13 +26,6 @@
                     var imgCarousel_a = document.getElementById('imgCarousel_a');
                     var Carousel = document.getElementById('Carousel');
                     Carousel.className = allClassName[index];
-                    {#url("../imgs/Carousel/bg1.png")#}
-                    {#Carousel.style.backgroundImage = "url(\"imgs/Carousel/bg1.png\")";#}
-                    {#console.log("url(\"imgs/Carousel/bg1.png\")");#}
-                    {#Carousel.style.backgroundImage='url("../imgs/Carousel/bg2  .png")';#}
-                    {#Carousel.style.backgroundRepeat = "repeat-x";#}
-                    {#console.log(Carousel.innerHTML);#}
-                    {#Carousel.style.background="url("+allBg[index]+")";#}
                     imgCarousel_a.href = allHref[index];
                     IMG.src = allImg[index];
                     for (var i = 0; i < allA.length; i++) {

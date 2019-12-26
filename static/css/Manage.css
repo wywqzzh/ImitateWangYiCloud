@@ -1,0 +1,287 @@
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+
+* {
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+}
+
+.main_box {
+    width: 920px;
+    margin: 0 auto;
+    height: 1100px;
+    overflow: auto;
+    border: 1px solid #e1e1e1;
+    border-top: none;
+    padding-left: 40px;
+}
+
+.main_box .box_Top {
+    padding-top: 60px;
+
+}
+
+.box_Top .box_top {
+    width: 820px;
+    float: right;
+}
+
+.Image {
+    padding: 5px;
+    border: 2px solid #dadada;
+    width: 200px;
+    height: 200px;
+    background: white;
+    float: left;
+    margin-right: 40px;
+}
+
+.Image img {
+    width: 200px;
+    height: 200px;
+}
+
+.box_top .Text {
+    width: 746px;
+    height: 214px;
+    background: white;
+    font-size: 30px;
+}
+
+.Text p {
+    line-height: 34px;
+    font-size: 28px;
+}
+
+.Text .Text_Label {
+    float: left;
+}
+
+.Text_Label img {
+    width: 69px;
+    height: 34px;
+    margin-right: 20px;
+}
+
+.main_box .list_box {
+    margin-top: 60px;
+}
+
+
+.list_title h3 {
+    float: left;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.list_title .text_songList {
+    color: #333333;
+    font-size: 24px;
+    font-weight: lighter;
+    margin-right: 20px;
+    width: 100px;
+}
+
+.list_title .num_songLits {
+    float: left;
+    height: 26px;
+    display:table-cell;
+    padding-top: 6px;
+}
+
+.num_songLits .number_songLits {
+    color: red;
+    font-size: 12px;
+}
+.num_songLits .key{
+    color: #898989;
+    font-size: 12px;
+}
+
+.list_box .list_table{
+    border-top: 3px solid #c20c0c;
+    display: block;
+    width: 920px;
+}
+table thead{
+    display: block;
+    background: url("../imgs/AlumAndList/table_thead_bg.png");
+    width: 920px;
+}
+thead th{
+    height: 38px;
+
+}
+.list_table .wp{
+    color: #666666;
+    font-size: 20px;
+    font-weight: lighter;
+}
+tr .w1{
+    width: 74px;
+    text-align: left;
+    border-right: 1px solid #e2e2e2;
+    padding-left: 20px;
+}
+tr .w2{
+    width: 220px;
+    text-align: left;
+    border-right: 1px solid #e2e2e2;
+    padding-left: 20px;
+}
+tr .w3{
+    width: 101px;
+    text-align: left;
+    border-right: 1px solid #e2e2e2;
+    padding-left: 20px;
+}
+tr .w4{
+    width: 220px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+table tbody{
+    display: block;
+    width: 920px;
+}
+tbody tr{
+    display: block;
+    height: 30px;
+}
+tbody tr td{
+    height: 30px;
+    width: 639px;
+}
+tbody tr .d1{
+    width:94px ;
+    line-height: 30px;
+}
+tbody tr .d2{
+    width:210px ;
+    line-height: 30px;
+}
+tbody tr .d3{
+    width: 121px;
+    line-height: 30px;
+}
+tbody tr .d4{
+    width: 167px;
+    line-height: 30px;
+}
+
+tbody tr .td_first{
+    padding-left: 20px;
+}
+tbody tr .td_second{
+    padding-left: 20px;
+    width: 205px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+tbody tr .td_third{
+    padding-left: 20px;
+    width: 101px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    color: #999999;
+}
+
+
+tbody tr .td_fouth{
+    padding-left: 20px;
+    width: 127px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+tbody tr .number{
+    width: 10px;
+    display: block;
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+    color: #999999;
+}
+.td_first a{
+    width: 30px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+
+}
+.button{
+    width: 30px;
+    height: 30px;
+    background: url("../imgs/AlumAndList/table_button1.png") no-repeat;
+    background-size: 30px 30px;
+}
+.button:hover{
+    background: url("../imgs/AlumAndList/table_button2.png")no-repeat;
+    background-size: 30px 30px;
+}
+.button2{
+    width: 30px;
+    height: 30px;
+    background: url("../imgs/AlumAndList/table_button3.png") no-repeat;
+    background-size: 30px 30px;
+}
+
+.td_third a{
+    width: 60px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    cursor: pointer;
+}
+.button3{
+    width: 30px;
+    height: 30px;
+    background: url("../imgs/AlumAndList/Favorite1.png") no-repeat;
+    background-size: 30px 30px;
+}
+.button3:hover{
+    background: url("../imgs/AlumAndList/Favorite2.png")no-repeat;
+    background-size: 30px 30px;
+}
+
+tbody tr:nth-of-type(even){
+    background: #f7f7f7;
+}
+
+
+#background {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0 , 0, 0);
+}
+
+#div1 {
+    background: white;
+    width: 200px;
+    height: 100px;
+    z-index: 1;
+    margin: 12% auto;
+    overflow: auto;
+}
+.d2 a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.d2 a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
