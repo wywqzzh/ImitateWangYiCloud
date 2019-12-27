@@ -4,77 +4,43 @@
     <link rel="icon" href="../static/imgs/logo.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="../static/imgs/logo.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/mymusic.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename="js/jquery-3.4.1.min.js") }}"></script>
 {% endblock %}
 {% block title %}
-    {{ username }}
+    {{ request.cookies.get('username') }}
 {% endblock %}
 {% block banner %}
     <div class="main_box">
         <div class="box_top">
-            <a href="#">{{ args['name'] }}</a>
+            <a href="#" style="margin-right: 560px">{{ args['name'] }}</a>
+            <a class="addList" style="color: #969696; font-size: 16px;cursor: pointer;margin-right: 30px">创建歌单</a>
+            <a class="deleteList" style="color: #969696; font-size: 16px;cursor: pointer;">删除歌单</a>
         </div>
         <div class="Content clearfix">
-{#            <div class="subImgContent">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
-{#            <div class="subImgContent">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
-{#            <div class="subImgContent">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
-{#            <div class="subImgContent">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
-{#            <div class="subImgContent" style="margin-right:0;">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
-{#            <div class="subImgContent">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
-{#            <div class="subImgContent">#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>#}
-{#                {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username %}#}
-{#                <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>#}
-{#            </div>#}
         </div>
         <script>
             var Content = document.getElementsByClassName('Content')[0];
-            var add = function (name, id, num,username) {
-                var br = document.createElement("br");
+
+            function setCookie(name, value) {
+                document.cookie = name + "=" + escape(value) + "; path=/";
+            }
+
+            var add = function (name, id, num, url) {
                 var div = document.createElement("div");
                 div.className += 'subImgContent';
                 var a1 = document.createElement("a");
-                var h = '{{ url_for('AlbumAndList',id=0,type='LIST') }}' + '?id=' + id+'&username='+username+'&isUser=1';
+                var h = '{{ url_for('AlbumAndList',id=0,type='LIST') }}' + '?id=' + id;
+                setCookie('isUser', '1');
                 a1.href = h;
                 var img = document.createElement("img");
-                img.src = "../static/imgs/LIST/" + id + ".jpg";
+                img.src = "../static" + url;
                 a1.appendChild(img);
                 div.appendChild(a1);
-                div.innerHTML+='<br/>';
+                div.innerHTML += '<br/>';
                 var a2 = document.createElement("a");
                 a2.href = h;
                 a2.className += 'text_a';
-                console.log("name：",name.length);
+                console.log("name：", name.length);
                 for (var i = 0; i < name.length; i++) {
                     if (i % 9 == 8) {
                         a2.innerHTML += '<br>';
@@ -85,7 +51,7 @@
                 {#a2.innerHTML=name;#}
                 div.appendChild(a2);
                 if (num % 5 == 4) {
-                    div.style.marginRight=0;
+                    div.style.marginRight = 0;
                     console.log(num)
                 }
                 Content.appendChild(div);
@@ -96,7 +62,101 @@
             var lists = args['lists'];
             for (var i = 0; i < lists.length; i++) {
                 console.log(i);
-                add(lists[i]['name'], lists[i]['id'], i ,args['username']);
+                add(lists[i]['name'], lists[i]['id'], i, lists[i]['url']);
+            }
+        </script>
+        {#        删除选择#}
+        <div id="background" class="back">
+            <div id="div1" class="content">
+                <a style="color: black;font-size: 16px">请选择歌单</a>
+                <select name="type" class="type" id="type" onchange="submitForm();" style="width: 200px;">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+        </div>
+        <script>
+            var deleteList = document.getElementsByClassName('deleteList')[0]
+            var div = document.getElementById('background');
+
+            deleteList.onclick = function () {
+                $.ajax({
+                    url: "{{ url_for('getMylist') }}",
+                    type: "POST",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data['suc'] == 0) {
+                            window.location.href = "{{ url_for('login') }}";
+                        } else {
+                            var TYPE = document.getElementsByClassName('type')[0];
+                            for (var j = 0; j < data['lists'].length; j++) {
+                                var flag = 0;
+                                var $options = $('.type').find('option');
+                                for (var k = 0; k < $options.length; k++) {
+                                    if ($options.get(k).value == data['lists'][j]['id']) {
+                                        flag = 1;
+                                    }
+                                }
+                                if (flag == 0) {
+                                    var option = document.createElement('option');
+                                    option.value = data['lists'][j]['id'];
+                                    option.innerHTML = data['lists'][j]['name'];
+                                    TYPE.appendChild(option);
+                                }
+
+                            }
+
+                        }
+                    }
+
+                })
+
+                div.style.display = "block";
+            }
+
+            function submitForm() {
+                var z = $('.type option:selected').val();
+                div.style.display = "none";
+                var h = "/deleteList/";
+                $.ajax({
+                    url: h,
+                    type: "POST",
+                    dataType: "json",
+                    data: {"lid": z},
+                    success: function (data) {
+                        location.reload();
+                    }
+                })
+                $(".type").val('0');
+            }
+        </script>
+        {#        创建歌单输入#}
+        <div id="background2" class="back">
+            <div id="div2" class="content">
+                <a style="color: black;font-size: 16px">请输入歌单名称</a>
+                <input  class="inputListname" type="text" name="listName" onchange="submitForm2();">
+            </div>
+        </div>
+
+        <script>
+            var addList = document.getElementsByClassName('addList')[0]
+            var div = document.getElementById('background2');
+            addList.onclick = function () {
+                div.style.display = "block";
+            }
+
+            function submitForm2() {
+                div.style.display = "none";
+                var listname=document.getElementsByClassName('inputListname')[0].value;
+                console.log('name',listname);
+                $.ajax({
+                    url: '/addList/',
+                    type: "POST",
+                    dataType: "json",
+                    data: {"listname": listname},
+                    success: function (data) {
+                        location.reload();
+                    }
+                })
             }
         </script>
     </div>

@@ -73,3 +73,6 @@ class Logic_Users():
     def deleteUser(self,username):
         query_filter =USERS.NICKNAME==username
         self.action.delete_by_filter(USERS,query_filter)
+
+    def addUserListTable(self,uid,lid):
+        self.action.add_user_list(uid,lid)

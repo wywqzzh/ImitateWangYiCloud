@@ -12,8 +12,8 @@
 
             var allA = nav.getElementsByTagName('a');
             var allImg = ['../static/imgs/Carousel/a.jpg', '../static/imgs/Carousel/b.jpg', '../static/imgs/Carousel/c.jpg', '../static/imgs/Carousel/d.jpg', '../static/imgs/Carousel/e.jpg']
-            var allHref = ['{{ url_for("playerDeal",id=599592620000001,Type='SONG') }}'+'?index=0', '{{ url_for("playerDeal",id=599615650000001,Type='ALBUM') }}'+'?index=0',
-                '{{ url_for("playerDeal",id=600929600000001,Type="LIST") }}'+'?index=0', 'http://www.uu898.com/', 'https://www.qq.com/'];
+            var allHref = ['{{ url_for("playerDeal",id=599592620000001,Type='SONG') }}' + '?index=0', '{{ url_for("playerDeal",id=599615650000001,Type='ALBUM') }}' + '?index=0',
+                '{{ url_for("playerDeal",id=600929600000001,Type="LIST") }}' + '?index=0', 'http://www.uu898.com/', 'https://www.qq.com/'];
             {#var allBg = ['../imgs/Carousel/bg1.png', '../imgs/Carousel/bg2.png', '../imgs/Carousel/bg3.png', '../imgs/Carousel/bg4.png', '../imgs/Carousel/bg5.png']#}
             var allClassName = ['Carousel clearfix', 'Carouse2 clearfix', 'Carouse3 clearfix', 'Carouse4 clearfix', 'Carouse5 clearfix'];
             var index = 0;
@@ -92,6 +92,12 @@
     网易云音乐
 {% endblock %}
 {% block banner %}
+    <script>
+        function setCookie(name, value) {
+            document.cookie = name + "=" + escape(value) + "; path=/";
+        }
+        setCookie('isUser','0');
+    </script>
     <div id="Carousel" class="Carousel clearfix">
         <div id="imgCarousel" class="imgCarousel clearfix">
             <a id="imgCarousel_a" href="{{ url_for("AlbumAndList",id=599592620000001,type='SONG') }}"
@@ -109,58 +115,58 @@
     <div class="main_box">
         <div class="box">
             <div class="box_top">
-                {% set h=url_for('playlist',username=username) %}
+                {% set h=url_for('playlist') %}
                 <img src="../static/imgs/main_box/box_top_bg.png">
                 <a href="{{ h }}">热门推荐</a>
             </div>
             <div class="imgContent">
                 <div class="imgContent1 clearfix">
                     <div class="subImgContent">
-                        {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=600441330000001,type='ALBUM') %}
                         <a href="{{ h }}"><img src="../static/imgs/ALBUM/600441330000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">新的心跳<br>G.E.M.邓紫棋</a>
                     </div>
                     <div class="subImgContent">
-                        {% set h=url_for("AlbumAndList",id=602673630000001,type='ALBUM')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=602673630000001,type='ALBUM') %}
                         <a href="{{ h }}"><img src="../static/imgs/ALBUM/602673630000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">怪咖<br>薛之谦</a>
                     </div>
                     <div class="subImgContent">
-                        {% set h=url_for("AlbumAndList",id=602702510000001,type='ALBUM')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=602702510000001,type='ALBUM') %}
                         <a href="{{ h }}"><img src="../static/imgs/ALBUM/602702510000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">伟大的渺小<br>林俊杰</a>
                     </div>
                     <div class="subImgContent" style="margin-right:0 ">
-                        {% set h=url_for("AlbumAndList",id=602712780000001,type='ALBUM')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=602712780000001,type='ALBUM')+'?isUser=0' %}
                         <a href="{{ h }}"><img src="../static/imgs/ALBUM/602712780000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">青年晚报<br>许嵩</a>
                     </div>
                 </div>
                 <div class="imgContent1 clearfix">
                     <div class="subImgContent">
-                        {% set h=url_for("AlbumAndList",id=600929600000001,type='LIST')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=600929600000001,type='LIST') %}
                         <a href="{{ h }}"><img src="../static/imgs/LIST/600929600000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">你有多久没有对一个人心<br>动过了</a>
                     </div>
                     <div class="subImgContent">
-                        {% set h=url_for("AlbumAndList",id=602719770000001,type='LIST')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=602719770000001,type='LIST')%}
                         <a href="{{ h }}"><img src="../static/imgs/LIST/602719770000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">听说你也在找好听的华<br>语歌</a>
                     </div>
                     <div class="subImgContent">
-                        {% set h=url_for("AlbumAndList",id=602728410000001,type='LIST')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=602728410000001,type='LIST')+'?isUser=0' %}
                         <a href="{{ h }}"><img src="../static/imgs/LIST/602728410000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">世间美好与你环环相扣</a>
                     </div>
                     <div class="subImgContent" style="margin-right:0 ">
-                        {% set h=url_for("AlbumAndList",id=602735910000001,type='LIST')+"?username="+username+'&isUser=0' %}
+                        {% set h=url_for("AlbumAndList",id=602735910000001,type='LIST')%}
                         <a href="{{ h }}"><img src="../static/imgs/LIST/602735910000001.jpg"></a><br>
                         <a href="{{ h }}" class="text_a">要把温柔和善良，留给值<br>得的人</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="box" id="leader"style="margin-bottom: 0">
+        <div class="box" id="leader" style="margin-bottom: 0">
             <div class="box_top">
                 <img src="../static/imgs/main_box/box_top_bg.png">
                 <a href="#">榜单</a>
@@ -169,7 +175,7 @@
                 <div class="blk clearfix">
                     <div class="Top clearfix">
                         <div class="top">
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['Id'],type='LIST')+"?username="+username%}
+                            {% set h='#leader' %}
                             <div><a href="{{ h }}"><img src="../static/imgs/n_blist/飙升榜.jpg"></a></div>
                             <div class="top_title"><a href="{{ h }}" class="text_blist">云音乐飙升榜</a></div>
                         </div>
@@ -177,34 +183,34 @@
                     <div class="blk_content">
                         <ul>
                             {% set name=args['solarArgs']['names'][0] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][0],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][0],type='SONG') %}
                             <li><a href={{ h }}><span class="Red">1</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][1] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][1],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][1],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">2</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][2] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][2],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][2],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">3</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][3] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][3],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][3],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">4</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][4] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][4],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][4],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">5</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][5] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][5],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][5],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">6</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][6] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][6],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][6],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">7</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][7] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][7],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][7],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">8</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][8] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][8],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][8],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">9</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['solarArgs']['names'][9] %}
-                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][9],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['solarArgs']['ids'][9],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">10</span> &nbsp;{{ name }}</a></li>
                         </ul>
                     </div>
@@ -212,7 +218,7 @@
                 <div class="blk clearfix">
                     <div class="Top clearfix">
                         <div class="top">
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['Id'],type='LIST')+"?username="+username%}
+                            {% set h='#leader' %}
                             <div><a href="{{ h }}"><img src="../static/imgs/n_blist/新歌榜.jpg"></a></div>
                             <div class="top_title"><a href="{{ h }}" class="text_blist">云音乐新歌榜</a></div>
                         </div>
@@ -220,34 +226,34 @@
                     <div class="blk_content">
                         <ul>
                             {% set name=args['newArgs']['names'][0] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][0],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][0],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">1</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][1] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][1],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][1],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">2</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][2] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][2],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][2],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">3</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][3] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][3],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][3],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">4</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][4] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][4],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][4],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">5</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][5] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][5],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][5],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">6</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][6] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][6],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][6],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">7</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][7] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][7],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][7],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">8</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][8] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][8],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][8],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">9</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['newArgs']['names'][9] %}
-                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][9],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['newArgs']['ids'][9],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">10</span> &nbsp;{{ name }}</a></li>
                         </ul>
                     </div>
@@ -255,7 +261,7 @@
                 <div class="blk clearfix" style="border: none">
                     <div class="Top clearfix">
                         <div class="top">
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['Id'],type='LIST')+"?username="+username%}
+                            {% set h='#leader' %}
                             <div><a href="{{ h }}"><img src="../static/imgs/n_blist/热歌榜.jpg"></a></div>
                             <div class="top_title"><a href="{{ h }}" class="text_blist">云音乐热歌榜</a></div>
                         </div>
@@ -263,34 +269,34 @@
                     <div class="blk_content">
                         <ul style="padding-left: 0">
                             {% set name=args['hotArgs']['names'][0] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][0],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][0],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">1</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][1] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][1],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][1],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">2</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][2] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][2],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][2],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Red">3</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][3] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][3],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][3],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">4</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][4] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][4],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][4],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">5</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][5] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][5],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][5],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">6</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][6] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][6],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][6],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">7</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][7] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][7],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][7],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">8</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][8] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][8],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][8],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">9</span> &nbsp;&nbsp;&nbsp;{{ name }}</a></li>
                             {% set name=args['hotArgs']['names'][9] %}
-                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][9],type='SONG')+"?username="+username %}
+                            {% set h=url_for('AlbumAndList',id=args['hotArgs']['ids'][9],type='SONG') %}
                             <li><a href="{{ h }}"><span class="Gray">10</span> &nbsp;{{ name }}</a></li>
                         </ul>
                     </div>

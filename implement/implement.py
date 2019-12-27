@@ -26,6 +26,11 @@ class implement_actions():
         self.session.commit()  # 提交
         return obj
 
+    def add_user_list(self,uid,lid):
+        sql="INSERT INTO USER_LIST(UID, LID) VALUES ('{0}','{1}')".format(uid,lid)
+        conn = self.engine.connect()
+        conn.execute(sql)
+        conn.close()
     def add_user(self, ID, NIKENAME, PASSWORD, PROBLEM, ANSWER):
         sql = "INSERT INTO USERS(ID, NICKNAME, PASSWORD, PROBLEM, ANSWER,UTYPE,Prohibit ) VALUES ('{0}','{1}','{2}','{3}','{4}',0,0)".format(
             ID, NIKENAME, PASSWORD, PROBLEM, ANSWER)

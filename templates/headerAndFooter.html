@@ -11,6 +11,10 @@
     {% endblock %}
 </head>
 <body>
+{% set username=request.cookies.get('username') %}
+{% if username==None %}
+{% set username='' %}
+{% endif %}
 <div class="top">
     <div class="top1 clearfix">
         <a href="#" class="clearfix">
@@ -18,15 +22,14 @@
             <h1 class="logo">网易云音乐</h1>
         </a>
         <ul class="clearfix">
-            <a href="{{ url_for('hello_world',username=username) }}" style="width: 74px" methods="post"><li style="width: 74px">首页</li></a>
-            {% set h=url_for('mymusic',username=username) %}
+            <a href="{{ url_for('hello_world') }}" style="width: 74px" methods="post"><li style="width: 74px">首页</li></a>
+            {% set h=url_for('mymusic') %}
             <a href="{{h}}" style="width: 148px"><li style="width: 148px">我的音乐</li></a>
             <a href="#leader" style="width: 111px"><li style="width: 111px">排行榜</li></a>
-{#            <a href="#" style="width: 74px"><li style="width: 74px">歌手</li></a>#}
             <a href="#" style="width: 185px"><li style="width: 185px">下载客户端</li></a>
         </ul>
         <div class="search">
-            {% set h=url_for('searchInterpretation')+"?username="+username %}
+            {% set h=url_for('searchInterpretation') %}
             <form action="{{ h }}" method="POST">
                 <input type="text" name="search" id="search">
             </form>
@@ -35,7 +38,7 @@
             {% if username=='' %}
                 <a href="{{ url_for('login') }}">登录</a>
             {% else %}
-                <a href="{{ url_for('hello_world') }}">{{ username }}</a>
+                <a href="{{ url_for('logLout') }}">{{ username }}</a>
             {% endif %}
         </div>
     </div>

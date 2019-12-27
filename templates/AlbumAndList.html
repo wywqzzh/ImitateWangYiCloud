@@ -159,13 +159,26 @@
             <script>
                 var $trs = $('tbody').find('tr');
                 var args = {{ args|tojson }};
+
+                function getCookie(name) {
+                    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+                    if (arr = document.cookie.match(reg))
+
+                        return unescape(arr[2]);
+                    else
+                        return null;
+                }
+
                 for (var i = 0; i < $trs.length; i++) {
                     var x = $trs.get(i).getElementsByClassName("td_third")[0].getElementsByTagName("a")[0];
                     {#console.log(x);#}
                     x.onmouseover = function () {
                         var time = this.innerHTML;
                         this.innerHTML = null;
-                        if (args['isUser'] == '0')
+                        var isUser = getCookie('isUser');
+                        console.log('isUser', isUser);
+                        if (isUser == '0')
                             this.className = 'button3';
                         else
                             this.className = 'button4';
@@ -176,7 +189,7 @@
                     }
                     x.onclick = function () {
                         this.innerHTML = null;
-                        if (args['isUser'] == '0')
+                        if (isUser == '0')
                             this.className = 'button3';
                         else
                             this.className = 'button4';
@@ -185,7 +198,7 @@
 
             </script>
         </div>
-        {% if args['isUser']==0 %}
+        {% if request.cookies.get('isUser')=='0' %}
             <div id="background" class="back">
                 <div id="div1" class="content">
                     <a style="color: black;font-size: 16px">请选择歌单</a>
@@ -203,7 +216,7 @@
                         var p = this.parentNode.parentNode.parentNode;
                         var h = p.firstChild.firstChild.firstChild.innerHTML;
                         $.ajax({
-                            url: "{{ url_for('getMylist',username=username) }}",
+                            url: "{{ url_for('getMylist') }}",
                             type: "POST",
                             dataType: "json",
                             success: function (data) {
@@ -237,12 +250,13 @@
                         div.style.display = "block";
                     }
                 }
+
                 function submitForm() {
                     var z = $('.type option:selected').val();
                     var TYPE = document.getElementsByClassName('type')[0];
                     var sid = args['sids'][TYPE.id];
                     div.style.display = "none";
-                    var h = "/addMusic/?sid=" + sid + '&lid=' + z + '&username=' + args['username'];
+                    var h = "/addMusic/?sid=" + sid + '&lid=' + z;
                     $.ajax({
                         url: h,
                         type: "POST",

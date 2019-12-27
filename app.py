@@ -1,7 +1,9 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect,session,make_response,Response
 from service.song import Logic_Song
 from tools.tools import getJsonByPath
 from sqlalchemy import BIGINT
+import os
+import datetime
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -10,11 +12,13 @@ from controller.songController import songController
 from controller.usersController import usersController
 from controller.leaderboardController import leaderboardController
 
+app.config['SECRET_KEY'] = os.urandom(24)
+
 
 # 主页
-@app.route('/')
+@app.route('/hello_world/')
 def hello_world():
-    username = request.args.get('username')
+    username = session.get('username')
     controller = leaderboardController()
     args = controller.Leaderboard()
     if username != None:
@@ -22,11 +26,6 @@ def hello_world():
     else:
         return render_template('home.html', username='', args=args)
 
-
-# @app.route('/player/')
-# def player():
-#     y = getJson();
-#     return render_template("player.html", irc=y);
 
 # 音乐播放
 @app.route('/playerDeal/<int:id>/<Type>/')
@@ -54,20 +53,12 @@ def AlbumAndList(id, type):
     ID = request.args.get('id');
     if id == 0:
         id = ID
-    isUser = request.args.get('isUser')
+    isUser = request.cookies.get('isUser')
     args = controller.getAlbumAndListMessageByAid(id, type)
-    username = request.args.get('username')
-    if isUser == '1':
-        args.update({'isUser': 1})
-    else:
-        args.update({"isUser": 0})
-    args.update({"username": username})
-    return render_template("AlbumAndList.html", username=username, id=id, type=type, args=args)
+    username=session.get('username')
+    return render_template("AlbumAndList.html",id=id, type=type, args=args)
 
 
-@app.route("/test/")
-def test():
-    return render_template("test.html")
 
 
 @app.route("/login/")
@@ -88,12 +79,18 @@ def loginInterpretation():
     if Prohibit == 1:
         error = '很抱歉你的账户违反了相关规定,已被冻结'
         return render_template("login.html", error=error)
+    session['uid'] = ID
+    session['username']=username
+    outdate = datetime.datetime.today() + datetime.timedelta(days=30)
+
     if UTYPE == 0:
-        URL = url_for('hello_world') + '?username=' + username
-        return redirect(URL)
+        resp = make_response(redirect(url_for('hello_world')))
+        resp.set_cookie('username', username, expires=outdate)
+        return resp
     else:
-        print('username', username)
-        return redirect('/manageUser/?username=' + username)
+        resp = make_response(redirect(url_for('manageUser')))
+        resp.set_cookie('username', username, expires=outdate)
+        return resp
 
 
 # 注册
@@ -137,8 +134,8 @@ def searchInterpretation():
     s = request.form.get('search')
     controller = songController()
     args = controller.fuzzyQuerySongs(s)
-    username = request.args.get('username')
-    return render_template('search.html', username=username, type='SONG', key=s, args=args)
+    username = session.get('username')
+    return render_template('search.html', type='SONG', key=s, args=args)
 
 
 # 歌曲播放量处理
@@ -156,27 +153,26 @@ def BehindMethod():
 # 我的音乐
 @app.route('/mymusic/')
 def mymusic():
-    username = request.args.get('username')
-    if username == '':
+    username = session.get('username')
+    uid=session.get('uid')
+    if username == ''or username==None:
         return redirect('/login/')
     controller = usersController()
-    args = controller.giveUserListMessage(username)
-    args.update({"username": username})
-    return render_template('mymusic.html', username=username, args=args)
+    args = controller.giveUserListMessage(uid)
+    return render_template('mymusic.html', args=args)
 
 
 # 热门推荐
 @app.route('/playlist/', methods=['post', 'get'])
 def playlist():
-    username = request.args.get('username')
+    username=session.get('username')
     controller = songController()
     style = request.form.get('style')
     if style == '' or style == None:
         style = '全部'
     print(style)
     args = controller.recommendListAndList(style)
-    args.update({"username": username})
-    return render_template('playlist.html', username=username, args=args)
+    return render_template('playlist.html', args=args)
 
 
 @app.route('/selectList/', methods=['post', 'get'])
@@ -189,7 +185,8 @@ def selectList():
 
 @app.route('/getMylist/', methods=['post', 'get'])
 def getMylist():
-    username = request.args.get('username')
+    username=session.get('username')
+    uid=session.get('uid')
     if username == None or username == '' or len(username) == 0:
         data = {
             'suc': 0
@@ -197,14 +194,13 @@ def getMylist():
         return data
     else:
         userscontroller = usersController()
-        data = userscontroller.giveUserListMessage(username)
+        data = userscontroller.giveUserListMessage(uid)
         data.update({'suc': 1})
         return data
 
 
 @app.route('/addMusic/', methods=['post', 'get'])
 def addMusic():
-    username = request.args.get('username')
     sid = request.args.get('sid')
     lid = request.args.get('lid')
     userscontroller = usersController()
@@ -235,10 +231,9 @@ def deleteMusic():
 @app.route('/manageUser/')
 def manageUser():
     controller = usersController()
-    args = controller.getAllUserMessage()
-    username = request.args.get('username')
-    print(args)
-    return render_template('Manage.html', args=args, username=username)
+    username = session.get('username');
+    args = controller.getAllUserMessage(username)
+    return render_template('Manage.html', args=args)
 
 
 @app.route('/setAdminOrUser/', methods=['post', 'get'])
@@ -279,5 +274,34 @@ def deleteUser():
     return data
 
 
+@app.route('/')
+def logLout():
+    if session.get('uid')!=None:
+        session.pop('uid')
+    if session.get('username')!=None:
+        session.pop('username')
+    resp=make_response(redirect(url_for('hello_world')))
+    resp.set_cookie('username','')
+    return resp
+
+
+@app.route('/deleteList/',methods=['post','get'])
+def deleteList():
+    data = request.values
+    lid = data['lid']
+    username = session.get('username')
+    controller = usersController()
+    controller.deleteList(username, lid)
+
+    return {'suc':1}
+
+@app.route('/addList/',methods=['post','get'])
+def addList():
+    data = request.values
+    listName = data['listname']
+    uid=session['uid']
+    controller = usersController()
+    controller.addList(listName, uid)
+    return {'suc':1}
 if __name__ == '__main__':
     app.run()
